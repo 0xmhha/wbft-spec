@@ -1,0 +1,23 @@
+version = 1
+
+# Specification documents and test vectors (see LICENSE).
+[[annotations]]
+path = ["README.md", "spec/**", "spec-ko/**"]
+SPDX-FileCopyrightText = "2026 The wbft-spec authors"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+# Programs. This table comes after the one above, so it takes precedence for
+# spec/tools/**; Go and Python files also carry their own SPDX header.
+[[annotations]]
+path = "spec/tools/**"
+SPDX-FileCopyrightText = "2026 The wbft-spec authors"
+SPDX-License-Identifier = "LGPL-3.0-or-later"
+
+# The LGPL-3.0 is a set of additional permissions on top of the GPL-3.0, so
+# LICENSES/ holds both texts. Following the REUSE FAQ ("If I use exclusively
+# LGPL-3.0-or-later, should I also include the GPL-3.0-or-later text?"), one
+# file names both licenses so that the GPL text is referenced.
+[[annotations]]
+path = "spec/tools/vectorgen/go.mod"
+SPDX-FileCopyrightText = "2026 The wbft-spec authors"
+SPDX-License-Identifier = "LGPL-3.0-or-later OR GPL-3.0-or-later"

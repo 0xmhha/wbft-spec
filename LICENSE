@@ -1,0 +1,29 @@
+The wbft-spec repository is licensed by path. The machine-readable form of
+this mapping is REUSE.toml (REUSE specification 3.3, https://reuse.software);
+the license texts are in LICENSES/.
+
+1. The specification documents and the test vectors are licensed under the
+   Creative Commons Attribution 4.0 International License (CC-BY-4.0,
+   LICENSES/CC-BY-4.0.txt). This covers:
+
+     README.md
+     spec/          except spec/tools/
+     spec-ko/       including spec-ko/tools/ (documentation only)
+     spec/vectors/  (the conformance test vectors)
+
+2. The programs under spec/tools/ (the vector generator, its checkers and
+   adapter, and the drafting tools) are licensed under the GNU Lesser General
+   Public License, version 3 or (at your option) any later version
+   (LGPL-3.0-or-later, LICENSES/LGPL-3.0-or-later.txt). The LGPL incorporates
+   the terms of the GNU General Public License version 3, whose text is in
+   LICENSES/GPL-3.0-or-later.txt. Every Go and Python source file under
+   spec/tools/ carries an SPDX-License-Identifier line; the other files under
+   spec/tools/ (go.mod, go.sum, JSON and TSV data, READMEs) are covered by
+   REUSE.toml. Following the REUSE FAQ for projects under the LGPL-3.0,
+   REUSE.toml marks one file, spec/tools/vectorgen/go.mod, as
+   "LGPL-3.0-or-later OR GPL-3.0-or-later", so that the GPL text in
+   LICENSES/ is referenced.
+
+The tools build against go-stablenet (https://github.com/stable-net/go-stablenet),
+which is itself licensed under the LGPL-3.0 and GPL-3.0. go-stablenet is not
+part of this repository.
