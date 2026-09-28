@@ -1,0 +1,16 @@
+runner: "crypto"
+handler: "bls_aggregate"
+case: "prepared_h"
+kind: "pure"
+description: "bls_aggregate(signatures): compressed sum of decompressed, subgroup-checked signatures: prepare seals of validators 0,1,2 over H (A-02 §8.4 prepared aggregate)"
+requirements:
+  - "WBFT-CRYPTO-024"
+  - "WBFT-CRYPTO-027"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen"
+  version: "0.1.1"

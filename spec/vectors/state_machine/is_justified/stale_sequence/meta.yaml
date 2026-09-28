@@ -1,0 +1,15 @@
+runner: "state_machine"
+handler: "is_justified"
+case: "stale_sequence"
+kind: "pure"
+description: "four ROUND-CHANGEs, one for sequence 9: fails at step 3 (reference result: not justified: round-change message view does not match target view)"
+requirements:
+  - "WBFT-SM-061"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage3"
+  version: "0.3.1"

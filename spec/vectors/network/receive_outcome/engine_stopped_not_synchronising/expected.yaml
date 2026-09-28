@@ -1,0 +1,11 @@
+start: null
+steps:
+  - outcome: "DISCONNECT"
+    dedup_key: null
+    relay_to: null
+  - outcome: "DISCONNECT"
+    dedup_key: null
+    relay_to: null
+  - outcome: "DROP_SILENT"
+    dedup_key: null
+    relay_to: null

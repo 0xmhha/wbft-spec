@@ -1,0 +1,16 @@
+runner: "network"
+handler: "receive_outcome"
+case: "engine_stopped_synchronising"
+kind: "steps"
+description: "engine stopped, the node is synchronising: consensus codes are dropped silently and the connection is kept (A-07 §5.4; the rule of eth/handler_istanbul.go:118-127 is composed by the generator)"
+requirements:
+  - "WBFT-NET-020"
+  - "WBFT-NET-027"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage3"
+  version: "0.3.1"

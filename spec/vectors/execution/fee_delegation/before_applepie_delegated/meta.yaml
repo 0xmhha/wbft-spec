@@ -1,0 +1,18 @@
+runner: "execution"
+handler: "fee_delegation"
+case: "before_applepie_delegated"
+kind: "pure"
+description: "ApplepieBlock 1000, block 100: a type-0x16 transaction whose fee payer differs from the sender is invalid (fee delegation type not supported); transactions applied with core.ApplyTransaction in order, as StateProcessor.Process applies the transactions of a block"
+requirements:
+  - "SNET-TX-030"
+  - "SNET-CFG-009"
+  - "SNET-TX-060"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"
+expected_error: "transaction 0: transaction type not supported: fee delegation type not supported"

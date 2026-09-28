@@ -1,0 +1,22 @@
+runner: "state_machine"
+handler: "rounds"
+case: "extra_seal_no_target_and_bad_prepare"
+kind: "steps"
+description: "N = 4, node v1: an extra seal without a target block is relayed (A-05 §16 row 8); PREPAREs with a wrong seal round or digest are rejected (row 16)"
+requirements:
+  - "WBFT-SM-001"
+  - "WBFT-SM-014"
+  - "WBFT-SM-019"
+  - "WBFT-SM-020"
+  - "WBFT-SM-041"
+  - "WBFT-SM-063"
+  - "WBFT-SM-064"
+  - "WBFT-TIMER-012"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage3"
+  version: "0.3.1"

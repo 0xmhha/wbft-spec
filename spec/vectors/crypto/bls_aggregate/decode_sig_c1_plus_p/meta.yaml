@@ -1,0 +1,19 @@
+runner: "crypto"
+handler: "bls_aggregate"
+case: "decode_sig_c1_plus_p"
+kind: "pure"
+description: "bls_aggregate(signatures): compressed sum of decompressed, subgroup-checked signatures: one signature: valid signature of key 3 over keccak256(\"wbft-bls\") with p added to the first half (x.c1)"
+requirements:
+  - "WBFT-CRYPTO-024"
+  - "WBFT-CRYPTO-027"
+  - "WBFT-CRYPTO-022"
+  - "WBFT-CRYPTO-056"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen"
+  version: "0.1.1"
+expected_error: "provided signatures fail the group check and cannot be compressed"

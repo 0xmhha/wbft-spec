@@ -1,0 +1,17 @@
+runner: "crypto"
+handler: "ecdsa_recover"
+case: "high_s_twin"
+kind: "pure"
+description: "ecdsa_recover_address(data, sig) as in a cgo build: (R, n-S, V^1): the high-S twin is accepted and recovers the same signer (A-02 §8.2)"
+requirements:
+  - "WBFT-CRYPTO-013"
+  - "WBFT-TYPE-003"
+  - "WBFT-CRYPTO-014"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen"
+  version: "0.1.1"

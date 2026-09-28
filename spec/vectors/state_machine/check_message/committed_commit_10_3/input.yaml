@@ -1,0 +1,9 @@
+view:
+  sequence: "10"
+  round: "2"
+state: "Committed"
+prior_round: "1"
+code: "20"
+message_view:
+  sequence: "10"
+  round: "3"

@@ -1,0 +1,22 @@
+runner: "execution"
+handler: "gas_tip_enforcement"
+case: "e5_authorized_zero_tip"
+kind: "pure"
+description: "B-07 E-5: authorized sender, max_fee 20 000 gwei, max_priority_fee 0: no override, gas price 20 000 gwei, coinbase 0; the receipt ends with the AuthorizedTxExecuted log; transactions applied with core.ApplyTransaction in order, as StateProcessor.Process applies the transactions of a block"
+requirements:
+  - "SNET-TX-001"
+  - "SNET-TX-012"
+  - "SNET-TX-015"
+  - "SNET-TX-050"
+  - "SNET-TX-051"
+  - "SNET-TX-071"
+  - "SNET-TX-011"
+  - "SNET-TX-073"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

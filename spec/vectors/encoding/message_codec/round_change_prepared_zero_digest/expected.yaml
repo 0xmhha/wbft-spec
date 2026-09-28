@@ -1,0 +1,9 @@
+type: "ROUND_CHANGE"
+sequence: "2"
+round: "1"
+prepared_round: "0"
+prepared_digest: "0x0000000000000000000000000000000000000000000000000000000000000000"
+signature: "0xaa"
+prepared_block: null
+justification: []
+encoded: "0xc9c6c30201c081aac0c0"

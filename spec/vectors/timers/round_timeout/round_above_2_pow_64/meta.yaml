@@ -1,0 +1,16 @@
+runner: "timers"
+handler: "round_timeout"
+case: "round_above_2_pow_64"
+kind: "pure"
+description: "round 2^64 + 3: only the low 64 bits (3) are used"
+requirements:
+  - "WBFT-TIMER-005"
+  - "WBFT-TIMER-008"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

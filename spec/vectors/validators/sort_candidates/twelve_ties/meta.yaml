@@ -1,0 +1,15 @@
+runner: "validators"
+handler: "sort_candidates"
+case: "twelve_ties"
+kind: "pure"
+description: "12 values with ties: ties keep input order; the order equals a stable sort"
+requirements:
+  - "WBFT-EPOCH-016"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

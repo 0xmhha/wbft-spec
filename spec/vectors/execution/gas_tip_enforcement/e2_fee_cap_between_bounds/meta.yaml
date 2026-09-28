@@ -1,0 +1,22 @@
+runner: "execution"
+handler: "gas_tip_enforcement"
+case: "e2_fee_cap_between_bounds"
+kind: "pure"
+description: "B-07 E-2: as E-1 with max_fee 30 000 gwei, between max(B, T) and B + T: valid, gas price 30 000 gwei, tip 10 000 gwei; transactions applied with core.ApplyTransaction in order, as StateProcessor.Process applies the transactions of a block"
+requirements:
+  - "SNET-TX-001"
+  - "SNET-TX-012"
+  - "SNET-TX-015"
+  - "SNET-TX-050"
+  - "SNET-TX-051"
+  - "SNET-TX-071"
+  - "SNET-TX-010"
+  - "SNET-TX-013"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

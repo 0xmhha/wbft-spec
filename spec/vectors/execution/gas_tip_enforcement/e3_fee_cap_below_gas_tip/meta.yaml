@@ -1,0 +1,18 @@
+runner: "execution"
+handler: "gas_tip_enforcement"
+case: "e3_fee_cap_below_gas_tip"
+kind: "pure"
+description: "B-07 E-3: max_fee 25 000 gwei, above B but below T: after the override the tip cap exceeds the fee cap, the transaction is invalid (ErrTipAboveFeeCap) and so is the block; transactions applied with core.ApplyTransaction in order, as StateProcessor.Process applies the transactions of a block"
+requirements:
+  - "SNET-TX-010"
+  - "SNET-TX-013"
+  - "SNET-TX-060"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"
+expected_error: "transaction 0: max priority fee per gas higher than max fee per gas: address 0xEedc23c78c4253Aa0c5bCC795fEc164d8De288d8, maxPriorityFeePerGas: 27600000000000, maxFeePerGas: 25000000000000"

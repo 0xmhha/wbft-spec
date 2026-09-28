@@ -1,0 +1,18 @@
+runner: "source"
+handler: "candidates_at_epoch"
+case: "validator_without_key"
+kind: "pure"
+description: "B-08 V-SRC-008: the four validators of keys 0..3, then the storage of the BLS key of key 2 is removed (a crafted state): key 2 stays a candidate and its key is empty; the reader is Engine.GetGovCandidates and systemcontracts.GetBLSPublicKey at the GovValidator address in force at block 10, and systemcontracts.GetGasTip at the genesis GovValidator address"
+requirements:
+  - "SNET-SRC-006"
+  - "SNET-SYS-040"
+  - "SNET-SYS-061"
+  - "SNET-SYS-062"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

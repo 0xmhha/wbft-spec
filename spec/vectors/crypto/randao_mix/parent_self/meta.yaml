@@ -1,0 +1,15 @@
+runner: "crypto"
+handler: "randao_mix"
+case: "parent_self"
+kind: "pure"
+description: "randao_mix(parent_mix, reveal) = parent_mix XOR keccak256(reveal), 32 bytes: parent mix = keccak256(reveal): result is 32 zero bytes (leading zeros kept)"
+requirements:
+  - "WBFT-CRYPTO-053"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen"
+  version: "0.1.1"

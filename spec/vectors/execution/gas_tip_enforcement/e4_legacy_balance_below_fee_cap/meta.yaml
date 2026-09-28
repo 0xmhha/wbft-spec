@@ -1,0 +1,17 @@
+runner: "execution"
+handler: "gas_tip_enforcement"
+case: "e4_legacy_balance_below_fee_cap"
+kind: "pure"
+description: "E-4 with a sender balance of 20 coin: below gas_limit × gas_price + value = 22 coin, so the transaction is invalid although the charged amount would be 0.9996 coin; transactions applied with core.ApplyTransaction in order, as StateProcessor.Process applies the transactions of a block"
+requirements:
+  - "SNET-TX-032"
+  - "SNET-TX-060"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"
+expected_error: "transaction 0: insufficient funds for gas * price + value: sender 0xEedc23c78c4253Aa0c5bCC795fEc164d8De288d8 have 20000000000000000000 want 22000000000000000000"

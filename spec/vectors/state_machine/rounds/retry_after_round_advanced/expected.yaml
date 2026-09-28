@@ -1,0 +1,168 @@
+start:
+  check: null
+  relay: null
+  sent: []
+  timers:
+    - kind: "round"
+      sequence: "10"
+      round: "0"
+  new_round:
+    - "0"
+  finalized: null
+  scheduled: []
+  state:
+    view:
+      sequence: "10"
+      round: "0"
+    state: "AcceptRequest"
+    proposer: "0x376ab524a47492d1c8222c67c0cff8d5fec34112"
+    locked_round: null
+    locked_block: null
+    preprepare: null
+    pending_request: null
+    preprepare_sent: "0"
+    prepares: []
+    commits: []
+    certificate: null
+    round_changes:
+      - round: "0"
+        sources: []
+        prepared_round: null
+        prepared_block: null
+    backlog: []
+    prior:
+      round: "0"
+      proposal: null
+    extra_prepare_seals: []
+    extra_commit_seals: []
+steps:
+  - check: null
+    relay: null
+    sent:
+      - code: "21"
+        type: "ROUND_CHANGE"
+        sequence: "10"
+        round: "1"
+        prepared_round: null
+        prepared_digest: "0x0000000000000000000000000000000000000000000000000000000000000000"
+        signature: "0x5d3e37efacebc7aab1a214bd7337f7ec0122965ed33844bb04523cddae4f42983b4fd82e2427c176b0f66a8edde1b0bff1847473f2672e7217e6d1863919a14f01"
+        prepared_block: null
+        justification: []
+        encoded: "0xf84bf847c30a01c0b8415d3e37efacebc7aab1a214bd7337f7ec0122965ed33844bb04523cddae4f42983b4fd82e2427c176b0f66a8edde1b0bff1847473f2672e7217e6d1863919a14f01c0c0"
+    timers:
+      - kind: "round"
+        sequence: "10"
+        round: "1"
+      - kind: "retry"
+        round: "1"
+    new_round:
+      - "1"
+    finalized: null
+    scheduled: []
+    state:
+      view:
+        sequence: "10"
+        round: "1"
+      state: "AcceptRequest"
+      proposer: "0x1111f6010b9b757b30e00a7d519cd98094b7a610"
+      locked_round: null
+      locked_block: null
+      preprepare: null
+      pending_request: null
+      preprepare_sent: "0"
+      prepares: []
+      commits: []
+      certificate: null
+      round_changes:
+        - round: "1"
+          sources: []
+          prepared_round: null
+          prepared_block: null
+      backlog: []
+      prior:
+        round: "0"
+        proposal: null
+      extra_prepare_seals: []
+      extra_commit_seals: []
+  - check: null
+    relay: null
+    sent:
+      - code: "21"
+        type: "ROUND_CHANGE"
+        sequence: "10"
+        round: "2"
+        prepared_round: null
+        prepared_digest: "0x0000000000000000000000000000000000000000000000000000000000000000"
+        signature: "0xb01129d330f0c1bd3206d6a766109c90a3c6dba87f154cb35c601156770f14556d72be9fd000c137487ac3f66a4b666c54f596a68a6dea682fa515b6e032670801"
+        prepared_block: null
+        justification: []
+        encoded: "0xf84bf847c30a02c0b841b01129d330f0c1bd3206d6a766109c90a3c6dba87f154cb35c601156770f14556d72be9fd000c137487ac3f66a4b666c54f596a68a6dea682fa515b6e032670801c0c0"
+    timers:
+      - kind: "round"
+        sequence: "10"
+        round: "2"
+      - kind: "retry"
+        round: "2"
+    new_round:
+      - "2"
+    finalized: null
+    scheduled: []
+    state:
+      view:
+        sequence: "10"
+        round: "2"
+      state: "AcceptRequest"
+      proposer: "0x503578b72bf5c96ab41508e2ac70303691dfcddb"
+      locked_round: null
+      locked_block: null
+      preprepare: null
+      pending_request: null
+      preprepare_sent: "0"
+      prepares: []
+      commits: []
+      certificate: null
+      round_changes:
+        - round: "2"
+          sources: []
+          prepared_round: null
+          prepared_block: null
+      backlog: []
+      prior:
+        round: "0"
+        proposal: null
+      extra_prepare_seals: []
+      extra_commit_seals: []
+  - check: null
+    relay: null
+    sent: []
+    timers:
+      - kind: "retry"
+        round: "2"
+    new_round: []
+    finalized: null
+    scheduled: []
+    state:
+      view:
+        sequence: "10"
+        round: "2"
+      state: "AcceptRequest"
+      proposer: "0x503578b72bf5c96ab41508e2ac70303691dfcddb"
+      locked_round: null
+      locked_block: null
+      preprepare: null
+      pending_request: null
+      preprepare_sent: "0"
+      prepares: []
+      commits: []
+      certificate: null
+      round_changes:
+        - round: "2"
+          sources: []
+          prepared_round: null
+          prepared_block: null
+      backlog: []
+      prior:
+        round: "0"
+        proposal: null
+      extra_prepare_seals: []
+      extra_commit_seals: []

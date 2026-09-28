@@ -1,0 +1,15 @@
+runner: "header"
+handler: "verify_headers"
+case: "valid_on_stored_parent"
+kind: "chain"
+description: "stored headers 1..4; the batch 5, 6, 7 is verified in order, each header with the preceding headers of the batch as parents"
+requirements:
+  - "WBFT-HDR-120"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

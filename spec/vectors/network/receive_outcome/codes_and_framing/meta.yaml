@@ -1,0 +1,18 @@
+runner: "network"
+handler: "receive_outcome"
+case: "codes_and_framing"
+kind: "steps"
+description: "N = 4, node v1: outcome classes by code and framing (A-07 §5.1, §8); for an error returned by HandleMsg the DISCONNECT is decided by eth/handler_istanbul.go, whose rule the generator composes"
+requirements:
+  - "WBFT-NET-020"
+  - "WBFT-NET-021"
+  - "WBFT-NET-028"
+  - "WBFT-NET-043"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage3"
+  version: "0.3.1"

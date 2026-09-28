@@ -1,0 +1,15 @@
+runner: "validators"
+handler: "validators_at"
+case: "fork_canonical_epoch_header_first"
+kind: "chain"
+description: "canonical blocks 1..7 and a non-canonical branch 4', 5' whose epoch block 4' records the set of keys 0..3; height 6 with parent 5': the canonical epoch header 4 is used, not the one on the parent's branch (A-08 WBFT-HDR-071)"
+requirements:
+  - "WBFT-HDR-071"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

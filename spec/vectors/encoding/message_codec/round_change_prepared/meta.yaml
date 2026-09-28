@@ -1,0 +1,19 @@
+runner: "encoding"
+handler: "message_codec"
+case: "round_change_prepared"
+kind: "pure"
+description: "decode the devp2p payload with the decoder for the code, then re-encode: ROUND-CHANGE by key 3 for round 1, prepared at round 0 with block H and the PREPARE of key 1 as justification (A-03 §9.6)"
+requirements:
+  - "WBFT-MSG-030"
+  - "WBFT-MSG-031"
+  - "WBFT-MSG-032"
+  - "WBFT-MSG-001"
+  - "WBFT-MSG-004"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen"
+  version: "0.1.1"

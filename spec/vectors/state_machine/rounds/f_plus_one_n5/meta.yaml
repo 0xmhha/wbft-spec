@@ -1,0 +1,22 @@
+runner: "state_machine"
+handler: "rounds"
+case: "f_plus_one_n5"
+kind: "steps"
+description: "N = 5 (F = 4/3, Q = 4), node v2 at (10, 0): the F+1 rule fires at the second sender and moves the node from round 0 directly to round 3"
+requirements:
+  - "WBFT-SM-001"
+  - "WBFT-SM-014"
+  - "WBFT-SM-019"
+  - "WBFT-SM-020"
+  - "WBFT-SM-057"
+  - "WBFT-SM-060"
+  - "WBFT-TIMER-010"
+  - "WBFT-TIMER-020"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage3"
+  version: "0.3.1"

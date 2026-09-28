@@ -1,0 +1,8 @@
+candidates:
+  - address: "0x376ab524a47492d1c8222c67c0cff8d5fec34112"
+    bls_public_key: "0x8eaaca1bbb29c07cb653b346e8434bb6b3bc63a4bb7c8dfea5c46bae2473646fe8041e3ff81da70bba7effda935a4576"
+  - address: "0x1111f6010b9b757b30e00a7d519cd98094b7a610"
+    bls_public_key: "0x8a8f913a1bac306b3b1661fc78ce376a650341ce314f7c0f615fc7abf3722eb6c256046483c266d3e03ce82edbed13a3"
+  - address: "0x503578b72bf5c96ab41508e2ac70303691dfcddb"
+    bls_public_key: "0x976a4cd50f07ad6fb3fc0a7a27a803212be7cf84b779d9a5562af81316187dec8ee319a0ce421c020dc1bf1faa494abe"
+gas_tip: "27600000000000"

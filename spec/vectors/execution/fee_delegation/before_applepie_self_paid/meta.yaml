@@ -1,0 +1,18 @@
+runner: "execution"
+handler: "fee_delegation"
+case: "before_applepie_self_paid"
+kind: "pure"
+description: "ApplepieBlock 1000, block 100: a type-0x16 transaction whose fee payer is the sender is accepted and charged like a type-0x02 transaction; the refund goes to the fee payer, that is the sender; transactions applied with core.ApplyTransaction in order, as StateProcessor.Process applies the transactions of a block"
+requirements:
+  - "SNET-TX-012"
+  - "SNET-TX-030"
+  - "SNET-TX-032"
+  - "SNET-TX-034"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

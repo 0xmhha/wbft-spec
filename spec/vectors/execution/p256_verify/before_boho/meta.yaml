@@ -1,0 +1,16 @@
+runner: "execution"
+handler: "p256_verify"
+case: "before_boho"
+kind: "pure"
+description: "the first reference input at block 99 with BohoBlock 100: 0x…0100 is an account without code, so the call succeeds with empty output and uses no gas"
+requirements:
+  - "SNET-TX-085"
+  - "SNET-CFG-010"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

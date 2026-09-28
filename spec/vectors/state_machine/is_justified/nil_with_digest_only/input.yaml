@@ -1,0 +1,22 @@
+proposal: "0xe893805c223ef6664ad1ff441101b7a7d76ef3a5f881c1cdb7ffca352000b356"
+target_view:
+  sequence: "10"
+  round: "1"
+round_changes:
+  - source: "0x376ab524a47492d1c8222c67c0cff8d5fec34112"
+    sequence: "10"
+    round: "1"
+    prepared_round: null
+    prepared_digest: "0xe893805c223ef6664ad1ff441101b7a7d76ef3a5f881c1cdb7ffca352000b356"
+  - source: "0x1111f6010b9b757b30e00a7d519cd98094b7a610"
+    sequence: "10"
+    round: "1"
+    prepared_round: null
+    prepared_digest: "0x0000000000000000000000000000000000000000000000000000000000000000"
+  - source: "0x503578b72bf5c96ab41508e2ac70303691dfcddb"
+    sequence: "10"
+    round: "1"
+    prepared_round: null
+    prepared_digest: "0x0000000000000000000000000000000000000000000000000000000000000000"
+prepares: []
+quorum: "3"

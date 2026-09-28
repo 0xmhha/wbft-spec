@@ -1,0 +1,34 @@
+genesis:
+  preset: "8282"
+  gov_validator:
+    members:
+      - "0xd0df2c250ef20c1bff3484cfc6db323903b46c57"
+    quorum: "1"
+    expiry: "604800"
+    max_proposals: "3"
+    validators:
+      - "0x376ab524a47492d1c8222c67c0cff8d5fec34112"
+    bls_public_keys:
+      - "0x8eaaca1bbb29c07cb653b346e8434bb6b3bc63a4bb7c8dfea5c46bae2473646fe8041e3ff81da70bba7effda935a4576"
+    gas_tip: "27600000000000"
+  gov_council:
+    members:
+      - "0xd0df2c250ef20c1bff3484cfc6db323903b46c57"
+    quorum: "1"
+    expiry: "604800"
+    max_proposals: "3"
+  alloc:
+    - address: "0xd0df2c250ef20c1bff3484cfc6db323903b46c57"
+      balance: "1000000000000000000000"
+genesis_time: "0"
+named_accounts:
+  - "0x376ab524a47492d1c8222c67c0cff8d5fec34112"
+  - "0xd0df2c250ef20c1bff3484cfc6db323903b46c57"
+steps:
+  - label: "A.proposeGasTip(T1): executed at creation"
+    sender: "0xd0df2c250ef20c1bff3484cfc6db323903b46c57"
+    to: "0x0000000000000000000000000000000000001001"
+    data: "0xeeaf681600000000000000000000000000000000000000000000000000001b48eb57e000"
+    gas: "3000000"
+    time: "1"
+    number: "1"

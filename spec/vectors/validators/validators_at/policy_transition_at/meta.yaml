@@ -1,0 +1,16 @@
+runner: "validators"
+handler: "validators_at"
+case: "policy_transition_at"
+kind: "chain"
+description: "transition {6, proposerPolicy 1}: height 6 has policy 1 (config_at(6))"
+requirements:
+  - "WBFT-VAL-006"
+  - "WBFT-VAL-011"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

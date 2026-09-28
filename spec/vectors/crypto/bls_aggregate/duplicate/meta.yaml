@@ -1,0 +1,17 @@
+runner: "crypto"
+handler: "bls_aggregate"
+case: "duplicate"
+kind: "pure"
+description: "bls_aggregate(signatures): compressed sum of decompressed, subgroup-checked signatures: the same signature twice (sum = 2*S; WBFT-CRYPTO-031)"
+requirements:
+  - "WBFT-CRYPTO-024"
+  - "WBFT-CRYPTO-027"
+  - "WBFT-CRYPTO-031"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen"
+  version: "0.1.1"

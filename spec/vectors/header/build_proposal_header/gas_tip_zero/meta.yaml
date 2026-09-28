@@ -1,0 +1,22 @@
+runner: "header"
+handler: "build_proposal_header"
+case: "gas_tip_zero"
+kind: "chain"
+description: "gas-tip query returns 0: GasTip is written as 0 (non-nil)"
+requirements:
+  - "WBFT-HDR-010"
+  - "WBFT-HDR-011"
+  - "WBFT-HDR-012"
+  - "WBFT-HDR-013"
+  - "WBFT-HDR-014"
+  - "WBFT-HDR-020"
+  - "WBFT-HDR-040"
+  - "WBFT-HDR-042"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

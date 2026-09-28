@@ -1,0 +1,15 @@
+runner: "encoding"
+handler: "hash_with_round"
+case: "undecodable_extra_rmax"
+kind: "pure"
+description: "hash_with_round(header, round) = keccak256(rlp(filtered_header(header, round))); keccak256(0xc0) when the extra does not decode; independent of Difficulty: H with a trailing byte in Extra, Difficulty = 1: falls back to keccak256(rlp(header))"
+requirements:
+  - "WBFT-ENC-081"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen"
+  version: "0.1.1"

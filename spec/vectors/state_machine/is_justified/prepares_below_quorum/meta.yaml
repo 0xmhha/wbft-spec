@@ -1,0 +1,15 @@
+runner: "state_machine"
+handler: "is_justified"
+case: "prepares_below_quorum"
+kind: "pure"
+description: "three nil ROUND-CHANGEs and two PREPAREs (0 < 2 < Q): fails at step 4 (reference result: not justified: number of prepared messages is less than required quorum of messages)"
+requirements:
+  - "WBFT-SM-061"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage3"
+  version: "0.3.1"

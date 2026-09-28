@@ -1,0 +1,20 @@
+runner: "encoding"
+handler: "extra_codec"
+case: "candidate_empty_list"
+kind: "pure"
+description: "decode_extra(extra) and encode_extra of the result: epoch_info with a candidate element 0xc0"
+requirements:
+  - "WBFT-ENC-001"
+  - "WBFT-ENC-020"
+  - "WBFT-ENC-021"
+  - "WBFT-ENC-022"
+  - "WBFT-ENC-050"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen"
+  version: "0.1.1"
+expected_error: "rlp: too few elements for struct { Addr common.Address; Diligence uint64 }, decoding into (types.WBFTExtra)(struct { VanityData []uint8; RandaoReveal []uint8; PrevRound uint32; PrevPreparedSeal *types.WBFTAggregatedSeal \"rlp:\\\"nil\\\"\"; PrevCommittedSeal *types.WBFTAggregatedSeal \"rlp:\\\"nil\\\"\"; Round uint32; PreparedSeal *types.WBFTAggregatedSeal \"rlp:\\\"nil\\\"\"; CommittedSeal *types.WBFTAggregatedSeal \"rlp:\\\"nil\\\"\"; GasTip *big.Int \"rlp:\\\"nil\\\"\"; EpochInfo *types.EpochInfo \"rlp:\\\"nil\\\"\" }).EpochInfo(struct { Candidates []*types.Candidate; Validators []uint32; BLSPublicKeys [][]uint8 }).Candidates[0]"

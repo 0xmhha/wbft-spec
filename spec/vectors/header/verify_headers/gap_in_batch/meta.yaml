@@ -1,0 +1,16 @@
+runner: "header"
+handler: "verify_headers"
+case: "gap_in_batch"
+kind: "chain"
+description: "stored headers 1..4; the batch 5, 7: the preceding header of the batch is used as the parent of 7, whose number does not match (H11); reference errors in order (informative): unknown ancestor"
+requirements:
+  - "WBFT-HDR-120"
+  - "WBFT-HDR-084"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

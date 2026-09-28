@@ -1,0 +1,22 @@
+runner: "chain"
+handler: "fork_schedule"
+case: "shanghai_cancun_times_n10_t999"
+kind: "pure"
+description: "preset 8282 with shanghaiTime 1000 and cancunTime 2000: the predicates follow the time, the rule flags of a WBFT block stay false (is_merge is false); block 10, time 999"
+requirements:
+  - "SNET-CFG-002"
+  - "SNET-CFG-003"
+  - "SNET-CFG-004"
+  - "SNET-CFG-005"
+  - "SNET-CFG-006"
+  - "SNET-CFG-018"
+  - "SNET-CFG-019"
+  - "SNET-CFG-029"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage3"
+  version: "0.3.1"

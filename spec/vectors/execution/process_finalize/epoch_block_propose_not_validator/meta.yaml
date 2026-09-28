@@ -1,0 +1,18 @@
+runner: "execution"
+handler: "process_finalize"
+case: "epoch_block_propose_not_validator"
+kind: "chain"
+description: "epoch block 8 prepared by key 6, which is not in V(8): the proposer path writes no EpochInfo (the block would then be invalid on import)"
+requirements:
+  - "SNET-FIN-001"
+  - "SNET-FIN-002"
+  - "SNET-FIN-021"
+  - "SNET-FIN-014"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

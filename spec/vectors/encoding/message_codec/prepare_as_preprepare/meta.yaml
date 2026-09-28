@@ -1,0 +1,19 @@
+runner: "encoding"
+handler: "message_codec"
+case: "prepare_as_preprepare"
+kind: "pure"
+description: "decode the devp2p payload with the decoder for the code, then re-encode: PREPARE payload delivered with code 0x12"
+requirements:
+  - "WBFT-MSG-040"
+  - "WBFT-MSG-041"
+  - "WBFT-MSG-001"
+  - "WBFT-MSG-004"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen"
+  version: "0.1.1"
+expected_error: "failed to decode PRE-PREPARE message"

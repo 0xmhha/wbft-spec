@@ -1,0 +1,16 @@
+runner: "header"
+handler: "verify_headers"
+case: "fork_branch_walk_back"
+kind: "chain"
+description: "stored canonical headers 1..3 only; the batch 4', 5', 6' of a branch whose epoch block 4' records the set of keys 0..3: no canonical header at 4, so 5' and 6' find 4' among the preceding headers of the batch"
+requirements:
+  - "WBFT-HDR-120"
+  - "WBFT-HDR-071"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

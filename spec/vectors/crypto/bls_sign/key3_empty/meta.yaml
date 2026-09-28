@@ -1,0 +1,18 @@
+runner: "crypto"
+handler: "bls_sign"
+case: "key3_empty"
+kind: "pure"
+description: "bls_sign(sk, msg) = sk * hash_to_G2(msg, BLS_SIG_BLS12381G2_XMD:SHA-256_SSWU_RO_POP_), no pre-hash: empty message (not used by WBFT; checks hash_to_G2 of the empty string)"
+requirements:
+  - "WBFT-CRYPTO-022"
+  - "WBFT-CRYPTO-025"
+  - "WBFT-CRYPTO-042"
+  - "WBFT-TYPE-004"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen"
+  version: "0.1.1"

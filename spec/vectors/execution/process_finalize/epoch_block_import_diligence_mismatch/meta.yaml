@@ -1,0 +1,18 @@
+runner: "execution"
+handler: "process_finalize"
+case: "epoch_block_import_diligence_mismatch"
+kind: "chain"
+description: "epoch block 8 whose EpochInfo gives the first candidate a diligence one higher than the recomputed one: the block is invalid"
+requirements:
+  - "SNET-FIN-002"
+  - "SNET-FIN-015"
+  - "SNET-SRC-001"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"
+expected_error: "WBFT: Diligence mismatch at index 0: expected 1824876, got 1824875"

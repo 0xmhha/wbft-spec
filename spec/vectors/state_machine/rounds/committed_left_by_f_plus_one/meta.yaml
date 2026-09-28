@@ -1,0 +1,23 @@
+runner: "state_machine"
+handler: "rounds"
+case: "committed_left_by_f_plus_one"
+kind: "steps"
+description: "N = 4, node v1 decided B in (10, 0) and the block is not imported yet: two ROUND-CHANGEs for round 1 move it to (10, 1) by the F+1 rule, keeping the lock (A-05 WBFT-SM-050)"
+requirements:
+  - "WBFT-SM-001"
+  - "WBFT-SM-014"
+  - "WBFT-SM-019"
+  - "WBFT-SM-020"
+  - "WBFT-SM-050"
+  - "WBFT-SM-057"
+  - "WBFT-TIMER-010"
+  - "WBFT-TIMER-012"
+  - "WBFT-TIMER-020"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage3"
+  version: "0.3.1"

@@ -1,0 +1,22 @@
+runner: "chain"
+handler: "genesis"
+case: "extra_data_ignored"
+kind: "pure"
+description: "preset 8282 with extraData 0x1234: the input extra is replaced by the WBFTExtra, same genesis as the preset"
+requirements:
+  - "SNET-GEN-001"
+  - "SNET-GEN-002"
+  - "SNET-GEN-003"
+  - "SNET-GEN-005"
+  - "SNET-GEN-006"
+  - "SNET-GEN-007"
+  - "SNET-GEN-016"
+  - "SNET-GEN-017"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage3"
+  version: "0.3.1"

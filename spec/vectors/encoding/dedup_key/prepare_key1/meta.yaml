@@ -1,0 +1,16 @@
+runner: "encoding"
+handler: "dedup_key"
+case: "prepare_key1"
+kind: "pure"
+description: "dedup_key(payload) = keccak256(rlp_encode_string(payload)): PREPARE wire of A-03 §9.6 (204 bytes)"
+requirements:
+  - "WBFT-MSG-060"
+  - "WBFT-NET-022"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen"
+  version: "0.1.1"

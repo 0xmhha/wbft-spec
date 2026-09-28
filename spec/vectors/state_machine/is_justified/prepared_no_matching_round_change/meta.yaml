@@ -1,0 +1,15 @@
+runner: "state_machine"
+handler: "is_justified"
+case: "prepared_no_matching_round_change"
+kind: "pure"
+description: "three nil ROUND-CHANGEs and three PREPAREs for B: no ROUND-CHANGE carries (0, B), fails at step 7 (reference result: not justified: quorum of roundchange messages with prepared round and proposal not found)"
+requirements:
+  - "WBFT-SM-061"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage3"
+  version: "0.3.1"

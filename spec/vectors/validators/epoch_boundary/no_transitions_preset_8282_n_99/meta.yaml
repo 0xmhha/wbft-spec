@@ -1,0 +1,16 @@
+runner: "validators"
+handler: "epoch_boundary"
+case: "no_transitions_preset_8282_n_99"
+kind: "pure"
+description: "epochLength 10, no transitions (preset 8282)"
+requirements:
+  - "WBFT-EPOCH-001"
+  - "WBFT-EPOCH-002"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

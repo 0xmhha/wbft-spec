@@ -1,0 +1,165 @@
+start:
+  outcome: null
+  dedup_key: null
+  relay_to: null
+  check: null
+  relay: null
+  sent: []
+  timers:
+    - kind: "round"
+      sequence: "10"
+      round: "0"
+  new_round:
+    - "0"
+  finalized: null
+  scheduled: []
+  state:
+    view:
+      sequence: "10"
+      round: "0"
+    state: "AcceptRequest"
+    proposer: "0x376ab524a47492d1c8222c67c0cff8d5fec34112"
+    locked_round: null
+    locked_block: null
+    preprepare: null
+    pending_request: null
+    preprepare_sent: "0"
+    prepares: []
+    commits: []
+    certificate: null
+    round_changes:
+      - round: "0"
+        sources: []
+        prepared_round: null
+        prepared_block: null
+    backlog: []
+    prior:
+      round: "0"
+      proposal: null
+    extra_prepare_seals: []
+    extra_commit_seals: []
+steps:
+  - outcome: "DISCONNECT"
+    dedup_key: null
+    relay_to: null
+    check: null
+    relay: null
+    sent: []
+    timers: []
+    new_round: []
+    finalized: null
+    scheduled: []
+    state:
+      view:
+        sequence: "10"
+        round: "0"
+      state: "AcceptRequest"
+      proposer: "0x376ab524a47492d1c8222c67c0cff8d5fec34112"
+      locked_round: null
+      locked_block: null
+      preprepare: null
+      pending_request: null
+      preprepare_sent: "0"
+      prepares: []
+      commits: []
+      certificate: null
+      round_changes:
+        - round: "0"
+          sources: []
+          prepared_round: null
+          prepared_block: null
+      backlog: []
+      prior:
+        round: "0"
+        proposal: null
+      extra_prepare_seals: []
+      extra_commit_seals: []
+  - outcome: "IGNORE"
+    dedup_key: "0x947a327c83a61706e26f9f5eb6c415977cd9cddc21efc9c894783d12cada20aa"
+    relay_to: null
+    check: null
+    relay: false
+    sent: []
+    timers: []
+    new_round: []
+    finalized: null
+    scheduled: []
+    state:
+      view:
+        sequence: "10"
+        round: "0"
+      state: "AcceptRequest"
+      proposer: "0x376ab524a47492d1c8222c67c0cff8d5fec34112"
+      locked_round: null
+      locked_block: null
+      preprepare: null
+      pending_request: null
+      preprepare_sent: "0"
+      prepares: []
+      commits: []
+      certificate: null
+      round_changes:
+        - round: "0"
+          sources: []
+          prepared_round: null
+          prepared_block: null
+      backlog: []
+      prior:
+        round: "0"
+        proposal: null
+      extra_prepare_seals: []
+      extra_commit_seals: []
+  - outcome: "ACCEPT"
+    dedup_key: "0xbf1f5122504790e45d233540410166788771f26fa672f4d9c95d4161dac18080"
+    relay_to:
+      - "0x376ab524a47492d1c8222c67c0cff8d5fec34112"
+      - "0x503578b72bf5c96ab41508e2ac70303691dfcddb"
+    check: "PROCESS"
+    relay: true
+    sent:
+      - code: "19"
+        type: "PREPARE"
+        sequence: "10"
+        round: "0"
+        digest: "0xf97034dfa4c11a110ce9fdc4e4baea66b9a7abba48052d8bbeeff65789b36511"
+        seal: "0xab74e1550eadaa3ae646eba9016befcf24910534f392f82b370b2ade2093516b4a2cb056835eea53febb86ed5c690b5d01a7b6a7fa816eb7c817baa0178814350e817f98216bfcf691963f1556160334bd6eb2a6c639592a13490f166b17fc30"
+        signature: "0x695485bcb5827c738dd7e2a2d10562ab1a1cd39746a55a1ee9ca825f7b2bee4a3b0876487bbc57c22ed17c0fb80b4b1e76ffe54d2c457a9c568e809f39c237a201"
+        encoded: "0xf8caf8850a80a0f97034dfa4c11a110ce9fdc4e4baea66b9a7abba48052d8bbeeff65789b36511b860ab74e1550eadaa3ae646eba9016befcf24910534f392f82b370b2ade2093516b4a2cb056835eea53febb86ed5c690b5d01a7b6a7fa816eb7c817baa0178814350e817f98216bfcf691963f1556160334bd6eb2a6c639592a13490f166b17fc30b841695485bcb5827c738dd7e2a2d10562ab1a1cd39746a55a1ee9ca825f7b2bee4a3b0876487bbc57c22ed17c0fb80b4b1e76ffe54d2c457a9c568e809f39c237a201"
+        to:
+          - "0x084ac57c61cd5dd6244eb0b4c42ca72d073a6c14"
+          - "0x376ab524a47492d1c8222c67c0cff8d5fec34112"
+          - "0x503578b72bf5c96ab41508e2ac70303691dfcddb"
+    timers:
+      - kind: "round"
+        sequence: "10"
+        round: "0"
+    new_round: []
+    finalized: null
+    scheduled: []
+    state:
+      view:
+        sequence: "10"
+        round: "0"
+      state: "Preprepared"
+      proposer: "0x376ab524a47492d1c8222c67c0cff8d5fec34112"
+      locked_round: null
+      locked_block: null
+      preprepare:
+        round: "0"
+        proposal: "0xf97034dfa4c11a110ce9fdc4e4baea66b9a7abba48052d8bbeeff65789b36511"
+      pending_request: null
+      preprepare_sent: "0"
+      prepares: []
+      commits: []
+      certificate: null
+      round_changes:
+        - round: "0"
+          sources: []
+          prepared_round: null
+          prepared_block: null
+      backlog: []
+      prior:
+        round: "0"
+        proposal: null
+      extra_prepare_seals: []
+      extra_commit_seals: []

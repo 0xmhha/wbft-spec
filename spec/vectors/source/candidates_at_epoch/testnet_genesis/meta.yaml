@@ -1,0 +1,18 @@
+runner: "source"
+handler: "candidates_at_epoch"
+case: "testnet_genesis"
+kind: "pure"
+description: "B-08 V-SRC-001: the GovValidator storage that the testnet preset genesis writes: the 7 testnet validators in parameter order, their keys, gas tip 27 600 gwei; the reader is Engine.GetGovCandidates and systemcontracts.GetBLSPublicKey at the GovValidator address in force at block 10, and systemcontracts.GetGasTip at the genesis GovValidator address"
+requirements:
+  - "SNET-SRC-006"
+  - "SNET-SYS-040"
+  - "SNET-SYS-061"
+  - "SNET-SYS-062"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

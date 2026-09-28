@@ -1,0 +1,19 @@
+runner: "encoding"
+handler: "extra_codec"
+case: "prepared_seal_present_empty"
+kind: "pure"
+description: "decode_extra(extra) and encode_extra of the result: prepared_seal present with empty sealers and signature (differs from absent)"
+requirements:
+  - "WBFT-ENC-001"
+  - "WBFT-ENC-020"
+  - "WBFT-ENC-021"
+  - "WBFT-ENC-022"
+  - "WBFT-ENC-043"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen"
+  version: "0.1.1"

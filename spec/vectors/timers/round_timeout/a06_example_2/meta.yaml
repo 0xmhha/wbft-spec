@@ -1,0 +1,17 @@
+runner: "timers"
+handler: "round_timeout"
+case: "a06_example_2"
+kind: "pure"
+description: "A-06 §4.2 example 2: 2000 ms, cap 10 s, round 3"
+requirements:
+  - "WBFT-TIMER-005"
+  - "WBFT-TIMER-006"
+  - "WBFT-TIMER-007"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

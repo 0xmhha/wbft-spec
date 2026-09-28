@@ -1,0 +1,24 @@
+config:
+  wbft:
+    request_timeout_seconds: "2"
+    block_period_seconds: "1"
+    epoch_length: "10"
+    allowed_future_block_time: "0"
+    proposer_policy: "0"
+    max_request_timeout_seconds: null
+  transitions:
+    - block: "4"
+      request_timeout_seconds: "3"
+      block_period_seconds: "0"
+      epoch_length: "0"
+      allowed_future_block_time: "0"
+      proposer_policy: null
+      max_request_timeout_seconds: null
+    - block: "4"
+      request_timeout_seconds: "5"
+      block_period_seconds: "0"
+      epoch_length: "0"
+      allowed_future_block_time: "0"
+      proposer_policy: null
+      max_request_timeout_seconds: null
+number: "4"

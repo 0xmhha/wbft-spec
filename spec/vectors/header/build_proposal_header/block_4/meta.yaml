@@ -1,0 +1,23 @@
+runner: "header"
+handler: "build_proposal_header"
+case: "block_4"
+kind: "chain"
+description: "block 4 on block 3 (sealed by validators 1, 2, 3 in round 0) by validator key 3"
+requirements:
+  - "WBFT-HDR-010"
+  - "WBFT-HDR-011"
+  - "WBFT-HDR-012"
+  - "WBFT-HDR-013"
+  - "WBFT-HDR-014"
+  - "WBFT-HDR-020"
+  - "WBFT-HDR-040"
+  - "WBFT-HDR-042"
+  - "WBFT-HDR-032"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

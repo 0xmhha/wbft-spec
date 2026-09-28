@@ -1,0 +1,18 @@
+runner: "validators"
+handler: "proposer"
+case: "sticky_last_nonmember_round_0"
+kind: "pure"
+description: "4 validators, policy id 1, last proposer not a member: offset 0 (WBFT-PROP-006), round 0"
+requirements:
+  - "WBFT-PROP-001"
+  - "WBFT-PROP-004"
+  - "WBFT-PROP-005"
+  - "WBFT-PROP-006"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

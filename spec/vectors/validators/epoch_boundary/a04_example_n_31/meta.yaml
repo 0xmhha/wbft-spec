@@ -1,0 +1,18 @@
+runner: "validators"
+handler: "epoch_boundary"
+case: "a04_example_n_31"
+kind: "pure"
+description: "A-04 §4.2: epochLength 10; transitions {25, epochLength 7}, {40, blockPeriodSeconds 2, proposerPolicy 1}, {50, epochLength 7}"
+requirements:
+  - "WBFT-EPOCH-001"
+  - "WBFT-EPOCH-002"
+  - "WBFT-EPOCH-003"
+  - "WBFT-PARAM-054"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

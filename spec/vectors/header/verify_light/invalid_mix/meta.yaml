@@ -1,0 +1,16 @@
+runner: "header"
+handler: "verify_light"
+case: "invalid_mix"
+kind: "chain"
+description: "H19: MixDigest altered. verify_light is not a reference function; the result is composed from reference calls (A-11 WBFT-VEC-020 exception, see the generator README); reason (informative): invalid randao mix: have de3f6b921ac2e5481e283b0f3b5ead0dc4b42c9df015ebed78dd1c66dfd9b3f8, want df3f6b921ac2e5481e283b0f3b5ead0dc4b42c9df015ebed78dd1c66dfd9b3f8"
+requirements:
+  - "WBFT-HDR-140"
+  - "WBFT-HDR-141"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

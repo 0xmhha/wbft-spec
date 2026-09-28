@@ -1,0 +1,18 @@
+runner: "chain"
+handler: "config_at"
+case: "request_timeout_wraps_n_5"
+kind: "pure"
+description: "requestTimeoutSeconds 18446744073709552 in the genesis section and 18446744073710 in a transition at 5: the product with 1000 is taken modulo 2^64"
+requirements:
+  - "WBFT-PARAM-050"
+  - "SNET-CFG-015"
+  - "WBFT-PARAM-052"
+  - "SNET-CFG-014"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

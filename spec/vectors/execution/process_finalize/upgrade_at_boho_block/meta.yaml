@@ -1,0 +1,21 @@
+runner: "execution"
+handler: "process_finalize"
+case: "upgrade_at_boho_block"
+kind: "chain"
+description: "BohoBlock 6: finalizing block 6 applies the Boho upgrade first (GovMinter code of version v2), then the base-fee distribution; the GovMinter account is not in the input state, so it is created with the new code"
+requirements:
+  - "SNET-FIN-001"
+  - "SNET-FIN-002"
+  - "SNET-FIN-021"
+  - "SNET-FIN-003"
+  - "SNET-FIN-004"
+  - "SNET-SYS-021"
+  - "SNET-CFG-011"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

@@ -1,0 +1,19 @@
+runner: "execution"
+handler: "process_finalize"
+case: "no_upgrade_after_boho_block"
+kind: "chain"
+description: "BohoBlock 6: block 7 applies no upgrade (upgrades are applied only at their block)"
+requirements:
+  - "SNET-FIN-001"
+  - "SNET-FIN-002"
+  - "SNET-FIN-021"
+  - "SNET-SYS-021"
+  - "SNET-CFG-011"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

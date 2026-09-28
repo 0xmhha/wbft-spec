@@ -1,0 +1,13 @@
+vanity_data: "0x"
+randao_reveal: "0x"
+prev_round: "0"
+prev_prepared_seal: null
+prev_committed_seal: null
+round: "0"
+prepared_seal:
+  sealers: "0x"
+  signature: "0x"
+committed_seal: null
+gas_tip: "0"
+epoch_info: null
+encoded: "0xcc808080c0c080c28080c080c0"

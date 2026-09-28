@@ -1,0 +1,16 @@
+runner: "validators"
+handler: "validators_at"
+case: "epoch_header_without_epoch_info"
+kind: "chain"
+description: "block 4 is an epoch block without EpochInfo: the lookup for height 5 fails (WBFT: epochInfo is nil)"
+requirements:
+  - "WBFT-VAL-009"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"
+expected_error: "WBFT: epochInfo is nil"

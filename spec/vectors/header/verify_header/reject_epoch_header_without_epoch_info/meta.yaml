@@ -1,0 +1,18 @@
+runner: "header"
+handler: "verify_header"
+case: "reject_epoch_header_without_epoch_info"
+kind: "chain"
+description: "block 5 on a chain whose epoch block 4 has no EpochInfo: V(5) cannot be determined (unknown ancestor); reference error (informative): unknown ancestor"
+requirements:
+  - "WBFT-HDR-080"
+  - "WBFT-HDR-070"
+  - "WBFT-VAL-009"
+  - "WBFT-HDR-131"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

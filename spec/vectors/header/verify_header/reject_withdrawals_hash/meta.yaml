@@ -1,0 +1,15 @@
+runner: "header"
+handler: "verify_header"
+case: "reject_withdrawals_hash"
+kind: "chain"
+description: "H7: WithdrawalsHash present; reference error (informative): invalid withdrawalsHash: have 56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421, expected nil"
+requirements:
+  - "WBFT-HDR-080"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

@@ -1,0 +1,15 @@
+runner: "header"
+handler: "verify_header"
+case: "reject_base_fee"
+kind: "chain"
+description: "H14: BaseFee one above the value computed from the parent; reference error (informative): invalid baseFee: have 20000000000001, want 20000000000000, parentBaseFee 20000000000000, parentGasUsed 0"
+requirements:
+  - "WBFT-HDR-080"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

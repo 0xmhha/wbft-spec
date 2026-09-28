@@ -1,0 +1,16 @@
+runner: "header"
+handler: "verify_headers"
+case: "first_header_fails"
+kind: "chain"
+description: "stored headers 1..4; the batch 6, 7 without block 5: the parent of 6 is neither in the batch nor stored (V0b), so 6 is rejected and 7 is reported as ErrUnknownAncestor; reference errors in order (informative): unknown ancestor; unknown ancestor"
+requirements:
+  - "WBFT-HDR-120"
+  - "WBFT-HDR-070"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

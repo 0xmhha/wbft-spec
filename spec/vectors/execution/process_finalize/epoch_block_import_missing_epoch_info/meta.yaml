@@ -1,0 +1,18 @@
+runner: "execution"
+handler: "process_finalize"
+case: "epoch_block_import_missing_epoch_info"
+kind: "chain"
+description: "epoch block 8 without EpochInfo: the block is invalid (WBFT: epochInfo is nil)"
+requirements:
+  - "SNET-FIN-002"
+  - "SNET-FIN-015"
+  - "SNET-SRC-001"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"
+expected_error: "WBFT: epochInfo is nil"

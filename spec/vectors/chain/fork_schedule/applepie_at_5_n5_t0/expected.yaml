@@ -1,0 +1,51 @@
+forks:
+  homestead: true
+  dao_fork: false
+  eip150: true
+  eip155: true
+  eip158: true
+  byzantium: true
+  constantinople: true
+  petersburg: true
+  istanbul: true
+  muir_glacier: true
+  berlin: true
+  london: true
+  arrow_glacier: false
+  gray_glacier: false
+  applepie: true
+  boho: false
+  shanghai: false
+  cancun: false
+  prague: false
+  verkle: false
+  anzeon: true
+rules:
+  is_anzeon: true
+  is_applepie: true
+  is_boho: false
+  is_merge: false
+  is_shanghai: false
+  is_cancun: false
+  is_prague: false
+  is_verkle: false
+system_contracts:
+  - name: "gov_validator"
+    address: "0x0000000000000000000000000000000000001001"
+    version: "v1"
+  - name: "native_coin_adapter"
+    address: "0x0000000000000000000000000000000000001000"
+    version: "v1"
+  - name: "gov_minter"
+    address: "0x0000000000000000000000000000000000001003"
+    version: "v1"
+  - name: "gov_master_minter"
+    address: "0x0000000000000000000000000000000000001002"
+    version: "v1"
+  - name: "gov_council"
+    address: "0x0000000000000000000000000000000000001004"
+    version: "v1"
+upgrades_at: []
+fork_id:
+  hash: "0xc98a722d"
+  next: "14408500"

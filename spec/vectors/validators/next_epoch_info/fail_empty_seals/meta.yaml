@@ -1,0 +1,16 @@
+runner: "validators"
+handler: "next_epoch_info"
+case: "fail_empty_seals"
+kind: "chain"
+description: "block 3 carries no previous seals: the seal accounting fails with empty seals. The chain fixture is not header-valid: this computation reads only Coinbase, the previous-seal bitmaps, ParentHash links and the MixDigest of the epoch header (keccak256 of the block number, as in A-04 §6.8); aggregate signatures are the placeholder c0 || 95 x 00"
+requirements:
+  - "WBFT-EPOCH-008"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"
+expected_error: "zero seals"

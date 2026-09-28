@@ -1,0 +1,16 @@
+runner: "validators"
+handler: "validators_at"
+case: "block_4_epoch_block"
+kind: "chain"
+description: "height 4 (an epoch block) is sealed by the set recorded at 0, not by the set it records"
+requirements:
+  - "WBFT-VAL-006"
+  - "WBFT-VAL-011"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

@@ -1,0 +1,15 @@
+runner: "header"
+handler: "verify_header"
+case: "reject_gas_limit_above_max"
+kind: "chain"
+description: "H5: GasLimit 2^63; reference error (informative): invalid gasLimit: have 9223372036854775808, max 9223372036854775807"
+requirements:
+  - "WBFT-HDR-080"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

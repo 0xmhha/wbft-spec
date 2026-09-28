@@ -1,0 +1,17 @@
+runner: "header"
+handler: "verify_headers"
+case: "whole_chain_from_genesis"
+kind: "chain"
+description: "only the genesis header is stored; the batch 1..7: block 1 uses the genesis EpochInfo, blocks 5..7 find the epoch block 4 among the preceding headers of the batch (no canonical header at 4)"
+requirements:
+  - "WBFT-HDR-120"
+  - "WBFT-HDR-071"
+  - "WBFT-HDR-121"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

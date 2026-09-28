@@ -1,0 +1,18 @@
+runner: "chain"
+handler: "config_at"
+case: "policy_other_id_n_3"
+kind: "pure"
+description: "a transition with proposerPolicy 7 (an identifier other than 0 and 1 selects RoundRobin; config_at keeps the identifier)"
+requirements:
+  - "WBFT-PARAM-050"
+  - "SNET-CFG-015"
+  - "WBFT-PARAM-020"
+  - "WBFT-PARAM-051"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

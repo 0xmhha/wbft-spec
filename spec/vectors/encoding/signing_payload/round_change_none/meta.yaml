@@ -1,0 +1,18 @@
+runner: "encoding"
+handler: "signing_payload"
+case: "round_change_none"
+kind: "pure"
+description: "decode the payload, compute message_signing_payload = rlp([code, signed_fields]) from the decoded values and recover the signer; the same for every embedded signed payload (round-change justification prepares; pre-prepare round changes then prepares): ROUND-CHANGE by key 3, nothing prepared (payload c515c30201c0)"
+requirements:
+  - "WBFT-MSG-002"
+  - "WBFT-MSG-003"
+  - "WBFT-CRYPTO-013"
+  - "WBFT-MSG-030"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen"
+  version: "0.1.1"
