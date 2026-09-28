@@ -1,0 +1,18 @@
+runner: "network"
+handler: "receive_outcome"
+case: "extra_seal_and_non_validator_peer"
+kind: "steps"
+description: "N = 4, node v1 also connected to a non-validator peer (key 7): messages from that peer are accepted by signature, an extra seal without a target block is relayed, and neither relays nor own broadcasts go to the non-validator peer (A-07 WBFT-NET-026, WBFT-NET-031, WBFT-NET-042)"
+requirements:
+  - "WBFT-NET-026"
+  - "WBFT-NET-031"
+  - "WBFT-NET-042"
+  - "WBFT-SM-063"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage3"
+  version: "0.3.1"

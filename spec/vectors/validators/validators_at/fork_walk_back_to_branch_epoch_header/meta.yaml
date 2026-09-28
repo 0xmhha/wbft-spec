@@ -1,0 +1,15 @@
+runner: "validators"
+handler: "validators_at"
+case: "fork_walk_back_to_branch_epoch_header"
+kind: "chain"
+description: "canonical blocks 1..3 only and the non-canonical branch 4', 5': no canonical header at 4, so the lookup for height 6 walks back from parent 5' and uses the EpochInfo of 4' (A-04 §3.1)"
+requirements:
+  - "WBFT-HDR-071"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

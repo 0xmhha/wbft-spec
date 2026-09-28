@@ -1,0 +1,18 @@
+runner: "chain"
+handler: "config_at"
+case: "allowed_future_block_time_ignored_n_1"
+kind: "pure"
+description: "allowedFutureBlockTime 5 in the genesis section; a transition at 2 that sets it to 30 (and blockPeriodSeconds 2) does not change it"
+requirements:
+  - "WBFT-PARAM-050"
+  - "SNET-CFG-015"
+  - "WBFT-PARAM-033"
+  - "WBFT-TIMER-004"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

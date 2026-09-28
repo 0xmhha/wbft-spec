@@ -1,0 +1,14 @@
+vanity_data: "0x"
+randao_reveal: "0x"
+prev_round: "0"
+prev_prepared_seal: null
+prev_committed_seal: null
+round: "0"
+prepared_seal: null
+committed_seal: null
+gas_tip: "0"
+epoch_info:
+  candidates: []
+  validators: []
+  bls_public_keys: []
+encoded: "0xcd808080c0c080c0c080c3c0c0c0"

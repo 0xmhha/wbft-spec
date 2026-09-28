@@ -1,0 +1,20 @@
+runner: "encoding"
+handler: "extra_codec"
+case: "genesis_4_validators"
+kind: "pure"
+description: "decode_extra(extra) and encode_extra of the result: genesis extra of validators key0..key3 with INITIAL_GAS_TIP (A-03 §9.4)"
+requirements:
+  - "WBFT-ENC-001"
+  - "WBFT-ENC-020"
+  - "WBFT-ENC-021"
+  - "WBFT-ENC-022"
+  - "WBFT-ENC-050"
+  - "WBFT-ENC-060"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen"
+  version: "0.1.1"

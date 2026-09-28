@@ -1,0 +1,7 @@
+proposal: "0xe893805c223ef6664ad1ff441101b7a7d76ef3a5f881c1cdb7ffca352000b356"
+target_view:
+  sequence: "10"
+  round: "1"
+round_changes: []
+prepares: []
+quorum: "1"

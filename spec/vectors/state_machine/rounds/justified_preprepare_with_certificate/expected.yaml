@@ -1,0 +1,131 @@
+start:
+  check: null
+  relay: null
+  sent: []
+  timers:
+    - kind: "round"
+      sequence: "10"
+      round: "0"
+  new_round:
+    - "0"
+  finalized: null
+  scheduled: []
+  state:
+    view:
+      sequence: "10"
+      round: "0"
+    state: "AcceptRequest"
+    proposer: "0x376ab524a47492d1c8222c67c0cff8d5fec34112"
+    locked_round: null
+    locked_block: null
+    preprepare: null
+    pending_request: null
+    preprepare_sent: "0"
+    prepares: []
+    commits: []
+    certificate: null
+    round_changes:
+      - round: "0"
+        sources: []
+        prepared_round: null
+        prepared_block: null
+    backlog: []
+    prior:
+      round: "0"
+      proposal: null
+    extra_prepare_seals: []
+    extra_commit_seals: []
+steps:
+  - check: null
+    relay: null
+    sent:
+      - code: "21"
+        type: "ROUND_CHANGE"
+        sequence: "10"
+        round: "1"
+        prepared_round: null
+        prepared_digest: "0x0000000000000000000000000000000000000000000000000000000000000000"
+        signature: "0x2eebcfc13aa403cc47d8437be30ec4eebd2f428450ca9c3da377a2eb04ef04816315e80fc290ca451e0bc4fc1814158f7bd6504ce461c0c10d3a0a48bb83390001"
+        prepared_block: null
+        justification: []
+        encoded: "0xf84bf847c30a01c0b8412eebcfc13aa403cc47d8437be30ec4eebd2f428450ca9c3da377a2eb04ef04816315e80fc290ca451e0bc4fc1814158f7bd6504ce461c0c10d3a0a48bb83390001c0c0"
+    timers:
+      - kind: "round"
+        sequence: "10"
+        round: "1"
+      - kind: "retry"
+        round: "1"
+    new_round:
+      - "1"
+    finalized: null
+    scheduled: []
+    state:
+      view:
+        sequence: "10"
+        round: "1"
+      state: "AcceptRequest"
+      proposer: "0x1111f6010b9b757b30e00a7d519cd98094b7a610"
+      locked_round: null
+      locked_block: null
+      preprepare: null
+      pending_request: null
+      preprepare_sent: "0"
+      prepares: []
+      commits: []
+      certificate: null
+      round_changes:
+        - round: "1"
+          sources: []
+          prepared_round: null
+          prepared_block: null
+      backlog: []
+      prior:
+        round: "0"
+        proposal: null
+      extra_prepare_seals: []
+      extra_commit_seals: []
+  - check: "PROCESS"
+    relay: true
+    sent:
+      - code: "19"
+        type: "PREPARE"
+        sequence: "10"
+        round: "1"
+        digest: "0xf97034dfa4c11a110ce9fdc4e4baea66b9a7abba48052d8bbeeff65789b36511"
+        seal: "0xafada7f70e9a41d5d8fdf08b0003435e1dda316b5d25f34363a08ac751aa37e6869b30c7098fd88e8e3c574d32ffd56618e8664c7ec076037827af0d802126fecfb645645fb9c9298ef0f3bf3e3629f71d3409e296d23edb050638d37bb4024b"
+        signature: "0x1c58babc06a8173153aacccfba82abc6792fb62f373ca3f0c442812bdba8193627ded7a162879bdd2b18a1b0177b3d8f8f8343fe384515b24a806c16d737443f01"
+        encoded: "0xf8caf8850a01a0f97034dfa4c11a110ce9fdc4e4baea66b9a7abba48052d8bbeeff65789b36511b860afada7f70e9a41d5d8fdf08b0003435e1dda316b5d25f34363a08ac751aa37e6869b30c7098fd88e8e3c574d32ffd56618e8664c7ec076037827af0d802126fecfb645645fb9c9298ef0f3bf3e3629f71d3409e296d23edb050638d37bb4024bb8411c58babc06a8173153aacccfba82abc6792fb62f373ca3f0c442812bdba8193627ded7a162879bdd2b18a1b0177b3d8f8f8343fe384515b24a806c16d737443f01"
+    timers:
+      - kind: "round"
+        sequence: "10"
+        round: "1"
+    new_round: []
+    finalized: null
+    scheduled: []
+    state:
+      view:
+        sequence: "10"
+        round: "1"
+      state: "Preprepared"
+      proposer: "0x1111f6010b9b757b30e00a7d519cd98094b7a610"
+      locked_round: null
+      locked_block: null
+      preprepare:
+        round: "1"
+        proposal: "0xf97034dfa4c11a110ce9fdc4e4baea66b9a7abba48052d8bbeeff65789b36511"
+      pending_request: null
+      preprepare_sent: "0"
+      prepares: []
+      commits: []
+      certificate: null
+      round_changes:
+        - round: "1"
+          sources: []
+          prepared_round: null
+          prepared_block: null
+      backlog: []
+      prior:
+        round: "0"
+        proposal: null
+      extra_prepare_seals: []
+      extra_commit_seals: []

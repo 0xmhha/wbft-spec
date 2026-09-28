@@ -1,0 +1,15 @@
+runner: "crypto"
+handler: "randao_data"
+case: "c8282_n256"
+kind: "pure"
+description: "randao_data(chain_id=8282, number=256) = keccak256(be_min(chain_id) || 0x01 || be_min(number))"
+requirements:
+  - "WBFT-CRYPTO-050"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen"
+  version: "0.1.1"

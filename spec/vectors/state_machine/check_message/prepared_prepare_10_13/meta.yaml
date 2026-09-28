@@ -1,0 +1,15 @@
+runner: "state_machine"
+handler: "check_message"
+case: "prepared_prepare_10_13"
+kind: "pure"
+description: "node at view (10, 2), prior round 1, state Prepared, PREPARE for view (10, 13): TOO_FAR (A-05 §5.2)"
+requirements:
+  - "WBFT-SM-019"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage3"
+  version: "0.3.1"

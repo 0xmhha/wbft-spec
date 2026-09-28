@@ -1,0 +1,15 @@
+runner: "header"
+handler: "verify_header"
+case: "reject_gas_limit_jump"
+kind: "chain"
+description: "H14: GasLimit doubled against the parent; reference error (informative): invalid gas limit: have 210000000, want 105000000 +-= 102538"
+requirements:
+  - "WBFT-HDR-080"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

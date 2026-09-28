@@ -1,0 +1,15 @@
+runner: "state_machine"
+handler: "is_justified"
+case: "prepared_higher_round_exists"
+kind: "pure"
+description: "target (10, 2): ROUND-CHANGEs prepared (0, B), (1, B2) and nil; PREPAREs of round 0 for B, proposal B: only two ROUND-CHANGEs have a prepared round <= 0, fails at step 7 (reference result: not justified: quorum of roundchange messages with prepared round and proposal not found)"
+requirements:
+  - "WBFT-SM-061"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage3"
+  version: "0.3.1"

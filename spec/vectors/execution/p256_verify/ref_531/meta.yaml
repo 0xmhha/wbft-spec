@@ -1,0 +1,17 @@
+runner: "execution"
+handler: "p256_verify"
+case: "ref_531"
+kind: "pure"
+description: "entry 531 of the reference file core/vm/testdata/precompiles/p256Verify.json (\"wycheproof/ecdsa_test.json EcdsaVerify SHA-256 #700: extreme value for k and edgecase s\"), called with 100 000 gas at block 1 of the mainnet preset (BohoBlock 0); the file expects output \"0x0000000000000000000000000000000000000000000000000000000000000001\" and gas 6900, which the call reproduces"
+requirements:
+  - "SNET-TX-085"
+  - "SNET-TX-089"
+  - "SNET-CFG-010"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

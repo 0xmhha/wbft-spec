@@ -1,0 +1,16 @@
+runner: "header"
+handler: "verify_light"
+case: "valid_block_5_across_epoch"
+kind: "chain"
+description: "block 5: V from block 4, Vp from the genesis header. verify_light is not a reference function; the result is composed from reference calls (A-11 WBFT-VEC-020 exception, see the generator README)"
+requirements:
+  - "WBFT-HDR-140"
+  - "WBFT-HDR-141"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

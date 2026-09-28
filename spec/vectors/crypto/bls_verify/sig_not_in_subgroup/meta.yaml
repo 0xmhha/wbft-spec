@@ -1,0 +1,18 @@
+runner: "crypto"
+handler: "bls_verify"
+case: "sig_not_in_subgroup"
+kind: "pure"
+description: "bls_verify(aggregate_public_keys(public_keys), message, signature); decoding failures of a key or of the signature fail the operation: signature outside the r-subgroup is rejected at decoding"
+requirements:
+  - "WBFT-CRYPTO-023"
+  - "WBFT-CRYPTO-024"
+  - "WBFT-CRYPTO-026"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen"
+  version: "0.1.1"
+expected_error: "signature not in group"

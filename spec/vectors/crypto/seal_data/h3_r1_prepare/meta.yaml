@@ -1,0 +1,17 @@
+runner: "crypto"
+handler: "seal_data"
+case: "h3_r1_prepare"
+kind: "pure"
+description: "seal_data(header, round, seal_type) = keccak256(hash_with_round(header, round) || seal_type); header given as its RLP: block 3 with prev seals and epoch info, committed at round 1: round 1, PREPARE_SEAL"
+requirements:
+  - "WBFT-CRYPTO-040"
+  - "WBFT-CRYPTO-041"
+  - "WBFT-TYPE-005"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen"
+  version: "0.1.1"

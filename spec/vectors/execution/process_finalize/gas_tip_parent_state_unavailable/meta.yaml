@@ -1,0 +1,17 @@
+runner: "execution"
+handler: "process_finalize"
+case: "gas_tip_parent_state_unavailable"
+kind: "chain"
+description: "block 6 when the parent state is unavailable: finalization fails (unlike header verification, which skips the check)"
+requirements:
+  - "SNET-FIN-002"
+  - "SNET-FIN-018"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"
+expected_error: "state unavailable (vector fixture has no state)"

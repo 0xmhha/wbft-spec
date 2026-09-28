@@ -1,0 +1,15 @@
+runner: "validators"
+handler: "shuffle"
+case: "count_2_pow_45"
+kind: "pure"
+description: "count 2^45: position >> 8 exceeds 2^32 and only its low 32 bits enter the source hash (uint32_le)"
+requirements:
+  - "WBFT-EPOCH-018"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

@@ -1,0 +1,17 @@
+runner: "execution"
+handler: "p256_verify"
+case: "input_159_bytes"
+kind: "pure"
+description: "the first reference input without its last byte (159 bytes): empty output, 6 900 gas, no error"
+requirements:
+  - "SNET-TX-085"
+  - "SNET-TX-089"
+  - "SNET-CFG-010"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

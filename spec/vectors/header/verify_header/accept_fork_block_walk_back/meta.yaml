@@ -1,0 +1,17 @@
+runner: "header"
+handler: "verify_header"
+case: "accept_fork_block_walk_back"
+kind: "chain"
+description: "block 6' on the non-canonical parent 5'; no canonical header at the epoch block 4, so V(6') and the previous-seal set come from the branch's epoch block 4' (A-04 §3.1 walk back)"
+requirements:
+  - "WBFT-HDR-080"
+  - "WBFT-HDR-070"
+  - "WBFT-HDR-071"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

@@ -1,0 +1,17 @@
+runner: "timers"
+handler: "round_timeout"
+case: "cap_above_2_pow_62_breaks"
+kind: "pure"
+description: "request_timeout 1 ms and cap 4611686019 s (above 2^62 ns), round 70: 10^6 ns * 2^43 is the first value above the cap, so the loop stops there and returns the cap without the Warn log"
+requirements:
+  - "WBFT-TIMER-005"
+  - "WBFT-TIMER-006"
+  - "WBFT-TIMER-007"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

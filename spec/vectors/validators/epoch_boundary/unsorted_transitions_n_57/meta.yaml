@@ -1,0 +1,15 @@
+runner: "validators"
+handler: "epoch_boundary"
+case: "unsorted_transitions_n_57"
+kind: "pure"
+description: "the transitions of A-04 §4.2 in configuration order 50, 25, 40: they are sorted by block first"
+requirements:
+  - "WBFT-EPOCH-001"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

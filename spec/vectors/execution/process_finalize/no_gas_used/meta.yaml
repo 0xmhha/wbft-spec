@@ -1,0 +1,20 @@
+runner: "execution"
+handler: "process_finalize"
+case: "no_gas_used"
+kind: "chain"
+description: "block 6 with gas used 0: nothing is distributed; the state root is that of the input state"
+requirements:
+  - "SNET-FIN-001"
+  - "SNET-FIN-002"
+  - "SNET-FIN-021"
+  - "SNET-FIN-007"
+  - "SNET-FIN-017"
+  - "SNET-FIN-018"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

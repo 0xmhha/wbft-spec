@@ -1,0 +1,12 @@
+genesis:
+  preset: "8283"
+  overrides:
+    timestamp: null
+    gas_limit: null
+    difficulty: null
+    number: null
+    extra_data: null
+    boho_block: null
+    alloc_add:
+      - address: "0x00000000000000000000000000000000000000bb"
+        balance: "5000000000000000000"

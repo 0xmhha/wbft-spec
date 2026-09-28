@@ -1,0 +1,23 @@
+runner: "network"
+handler: "receive_outcome"
+case: "accept_relay_and_known"
+kind: "steps"
+description: "N = 4, node v1 connected to v0, v2, v3: an accepted message is relayed with the received bytes to the validators whose recent cache lacks its key; a repeat from any peer is dropped silently; the sender of a message is its signer, not the peer (A-07 §5.2, §6.2, §7)"
+requirements:
+  - "WBFT-NET-022"
+  - "WBFT-NET-023"
+  - "WBFT-NET-024"
+  - "WBFT-NET-026"
+  - "WBFT-NET-030"
+  - "WBFT-NET-031"
+  - "WBFT-NET-032"
+  - "WBFT-NET-040"
+  - "WBFT-SM-011"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage3"
+  version: "0.3.1"

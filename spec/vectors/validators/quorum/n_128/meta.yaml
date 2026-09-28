@@ -1,0 +1,17 @@
+runner: "validators"
+handler: "quorum"
+case: "n_128"
+kind: "pure"
+description: "N = 128: F = 42.333333333333336 (binary64), quorum 86, F+1 threshold 43"
+requirements:
+  - "WBFT-VAL-001"
+  - "WBFT-VAL-002"
+  - "WBFT-VAL-003"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

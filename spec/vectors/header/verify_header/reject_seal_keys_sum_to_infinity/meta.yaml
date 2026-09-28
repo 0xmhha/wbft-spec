@@ -1,0 +1,17 @@
+runner: "header"
+handler: "verify_header"
+case: "reject_seal_keys_sum_to_infinity"
+kind: "chain"
+description: "block 1 sealed by validators 0, 1, 2 whose BLS keys sum to the point at infinity: the aggregate signature is c0 || 95 x 00 and the pairing holds trivially, but the seal MUST be rejected; reference error (informative): invalid prepared seals"
+requirements:
+  - "WBFT-HDR-080"
+  - "WBFT-HDR-100"
+  - "WBFT-CRYPTO-055"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

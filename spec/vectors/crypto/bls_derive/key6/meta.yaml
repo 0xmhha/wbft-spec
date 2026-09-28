@@ -1,0 +1,18 @@
+runner: "crypto"
+handler: "bls_derive"
+case: "key6"
+kind: "pure"
+description: "derive_bls_key(node_key): IETF KeyGen with IKM = 32-byte node key, empty key_info, L = 48; public key = sk*G1 compressed: vector key 6"
+requirements:
+  - "WBFT-CRYPTO-020"
+  - "WBFT-CRYPTO-021"
+  - "WBFT-CRYPTO-022"
+  - "WBFT-TYPE-004"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen"
+  version: "0.1.1"

@@ -1,0 +1,20 @@
+runner: "header"
+handler: "verify_header"
+case: "accept_next_block"
+kind: "chain"
+description: "block 7 on the stored head 6, proposed by a validator of V(7) and sealed by 3 of 4 validators; H15b and H21 are skipped because the fixture has no state"
+requirements:
+  - "WBFT-HDR-080"
+  - "WBFT-HDR-086"
+  - "WBFT-HDR-100"
+  - "WBFT-HDR-102"
+  - "WBFT-HDR-103"
+  - "WBFT-HDR-111"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

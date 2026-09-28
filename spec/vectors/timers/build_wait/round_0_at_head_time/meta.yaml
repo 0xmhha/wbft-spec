@@ -1,0 +1,15 @@
+runner: "timers"
+handler: "build_wait"
+case: "round_0_at_head_time"
+kind: "pure"
+description: "round 0 at the head time, block period 2: wait 2 s; the reference computes 2000000000 ns, and the builder sleeps for that duration (time.Sleep returns at once for a duration <= 0), so the effective wait is its maximum with 0"
+requirements:
+  - "WBFT-TIMER-040"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage3"
+  version: "0.3.1"

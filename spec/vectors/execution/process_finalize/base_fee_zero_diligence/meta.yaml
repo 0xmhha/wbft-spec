@@ -1,0 +1,20 @@
+runner: "execution"
+handler: "process_finalize"
+case: "base_fee_zero_diligence"
+kind: "chain"
+description: "block 6 on the chain whose EpochInfo at block 4 gives every candidate diligence 0: the diligence sum is 0, so the whole base fee goes to the coinbase (key 0)"
+requirements:
+  - "SNET-FIN-001"
+  - "SNET-FIN-002"
+  - "SNET-FIN-021"
+  - "SNET-FIN-007"
+  - "SNET-FIN-010"
+  - "SNET-FIN-012"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

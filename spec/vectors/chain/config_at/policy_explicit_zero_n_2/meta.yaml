@@ -1,0 +1,17 @@
+runner: "chain"
+handler: "config_at"
+case: "policy_explicit_zero_n_2"
+kind: "pure"
+description: "a transition with proposerPolicy 0 overrides Sticky (a present pointer field overrides even when 0)"
+requirements:
+  - "WBFT-PARAM-050"
+  - "SNET-CFG-015"
+  - "WBFT-PARAM-051"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

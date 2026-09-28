@@ -1,0 +1,18 @@
+runner: "execution"
+handler: "process_finalize"
+case: "gas_tip_mismatch"
+kind: "chain"
+description: "block 6 whose header gas tip is the default 27 600 gwei while the parent state holds 1 gwei: the block is invalid"
+requirements:
+  - "SNET-FIN-002"
+  - "SNET-FIN-017"
+  - "SNET-FIN-018"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"
+expected_error: "invalid gas tip: have 27600000000000, want 1000000000"

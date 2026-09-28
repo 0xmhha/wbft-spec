@@ -1,0 +1,15 @@
+runner: "validators"
+handler: "shuffle"
+case: "zero_seed_count_4"
+kind: "pure"
+description: "all-zero seed, count 4 (A-04 §6.8)"
+requirements:
+  - "WBFT-EPOCH-018"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

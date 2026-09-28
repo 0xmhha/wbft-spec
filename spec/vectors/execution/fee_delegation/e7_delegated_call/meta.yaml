@@ -1,0 +1,18 @@
+runner: "execution"
+handler: "fee_delegation"
+case: "e7_delegated_call"
+kind: "pure"
+description: "B-07 E-7: sender S (non-authorized), fee payer P, value 1 coin to a contract, gas 50 000, max_fee 100 000 gwei, after Applepie: gas price 47 600 gwei; P is debited gas × gas price and refunded the unused gas, S pays only the value; transactions applied with core.ApplyTransaction in order, as StateProcessor.Process applies the transactions of a block"
+requirements:
+  - "SNET-TX-012"
+  - "SNET-TX-031"
+  - "SNET-TX-034"
+  - "SNET-TX-050"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

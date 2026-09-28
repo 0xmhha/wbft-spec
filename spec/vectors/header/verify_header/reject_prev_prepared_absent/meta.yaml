@@ -1,0 +1,17 @@
+runner: "header"
+handler: "verify_header"
+case: "reject_prev_prepared_absent"
+kind: "chain"
+description: "H20: PrevPreparedSeal absent; reference error (informative): zero prev prepared seals"
+requirements:
+  - "WBFT-HDR-080"
+  - "WBFT-HDR-091"
+  - "WBFT-HDR-103"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

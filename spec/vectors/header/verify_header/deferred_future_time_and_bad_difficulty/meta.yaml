@@ -1,0 +1,17 @@
+runner: "header"
+handler: "verify_header"
+case: "deferred_future_time_and_bad_difficulty"
+kind: "chain"
+description: "block 7 with Time 3000000000 and Difficulty 2: H2 precedes H4, so the verdict is deferred (A-08 §10.6); reference error (informative): block in the future"
+requirements:
+  - "WBFT-HDR-080"
+  - "WBFT-HDR-081"
+  - "WBFT-VEC-031"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

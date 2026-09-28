@@ -1,0 +1,17 @@
+runner: "header"
+handler: "verify_header"
+case: "reject_prepared_sealer_out_of_range"
+kind: "chain"
+description: "H17: PreparedSeal with sealer index 4 in a set of 4 (signature of indices 0, 1, 2); reference error (informative): invalid prepared seals"
+requirements:
+  - "WBFT-HDR-080"
+  - "WBFT-HDR-100"
+  - "WBFT-HDR-101"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

@@ -1,0 +1,17 @@
+runner: "validators"
+handler: "proposer"
+case: "round_robin_last_idx1_round_0"
+kind: "pure"
+description: "4 validators, policy id 0, last proposer at index 1, round 0"
+requirements:
+  - "WBFT-PROP-001"
+  - "WBFT-PROP-003"
+  - "WBFT-PROP-005"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

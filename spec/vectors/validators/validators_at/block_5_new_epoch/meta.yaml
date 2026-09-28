@@ -1,0 +1,16 @@
+runner: "validators"
+handler: "validators_at"
+case: "block_5_new_epoch"
+kind: "chain"
+description: "height 5: the set recorded at block 4, in the order of its EpochInfo.validators ([3, 1, 4, 0] of candidates keys 0..4)"
+requirements:
+  - "WBFT-VAL-006"
+  - "WBFT-VAL-011"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

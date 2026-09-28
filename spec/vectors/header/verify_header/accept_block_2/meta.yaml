@@ -1,0 +1,17 @@
+runner: "header"
+handler: "verify_header"
+case: "accept_block_2"
+kind: "chain"
+description: "stored block 2: the first block that carries previous seals (block 1 was committed in round 0); block 2 itself was committed in round 1"
+requirements:
+  - "WBFT-HDR-080"
+  - "WBFT-HDR-091"
+  - "WBFT-HDR-103"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

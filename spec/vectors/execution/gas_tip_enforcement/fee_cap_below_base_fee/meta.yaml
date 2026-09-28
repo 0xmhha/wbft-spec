@@ -1,0 +1,17 @@
+runner: "execution"
+handler: "gas_tip_enforcement"
+case: "fee_cap_below_base_fee"
+kind: "pure"
+description: "authorized sender (no override), max_fee 19 999 gwei below the base fee and max_priority_fee 0: invalid (ErrFeeCapTooLow); transactions applied with core.ApplyTransaction in order, as StateProcessor.Process applies the transactions of a block"
+requirements:
+  - "SNET-TX-011"
+  - "SNET-TX-060"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"
+expected_error: "transaction 0: max fee per gas less than block base fee: address 0x8CF935870BB0845A911A0b7651Ffa313E250baD6, maxFeePerGas: 19999000000000, baseFee: 20000000000000"

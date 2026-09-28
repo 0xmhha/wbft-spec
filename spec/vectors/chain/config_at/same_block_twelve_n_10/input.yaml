@@ -1,0 +1,94 @@
+config:
+  wbft:
+    request_timeout_seconds: "2"
+    block_period_seconds: "1"
+    epoch_length: "10"
+    allowed_future_block_time: "0"
+    proposer_policy: "0"
+    max_request_timeout_seconds: null
+  transitions:
+    - block: "20"
+      request_timeout_seconds: "100"
+      block_period_seconds: "0"
+      epoch_length: "2"
+      allowed_future_block_time: "0"
+      proposer_policy: null
+      max_request_timeout_seconds: null
+    - block: "10"
+      request_timeout_seconds: "101"
+      block_period_seconds: "0"
+      epoch_length: "3"
+      allowed_future_block_time: "0"
+      proposer_policy: null
+      max_request_timeout_seconds: null
+    - block: "20"
+      request_timeout_seconds: "102"
+      block_period_seconds: "0"
+      epoch_length: "4"
+      allowed_future_block_time: "0"
+      proposer_policy: null
+      max_request_timeout_seconds: null
+    - block: "10"
+      request_timeout_seconds: "103"
+      block_period_seconds: "0"
+      epoch_length: "5"
+      allowed_future_block_time: "0"
+      proposer_policy: null
+      max_request_timeout_seconds: null
+    - block: "20"
+      request_timeout_seconds: "104"
+      block_period_seconds: "0"
+      epoch_length: "6"
+      allowed_future_block_time: "0"
+      proposer_policy: null
+      max_request_timeout_seconds: null
+    - block: "10"
+      request_timeout_seconds: "105"
+      block_period_seconds: "0"
+      epoch_length: "7"
+      allowed_future_block_time: "0"
+      proposer_policy: null
+      max_request_timeout_seconds: null
+    - block: "20"
+      request_timeout_seconds: "106"
+      block_period_seconds: "0"
+      epoch_length: "8"
+      allowed_future_block_time: "0"
+      proposer_policy: null
+      max_request_timeout_seconds: null
+    - block: "10"
+      request_timeout_seconds: "107"
+      block_period_seconds: "0"
+      epoch_length: "9"
+      allowed_future_block_time: "0"
+      proposer_policy: null
+      max_request_timeout_seconds: null
+    - block: "20"
+      request_timeout_seconds: "108"
+      block_period_seconds: "0"
+      epoch_length: "10"
+      allowed_future_block_time: "0"
+      proposer_policy: null
+      max_request_timeout_seconds: null
+    - block: "10"
+      request_timeout_seconds: "109"
+      block_period_seconds: "0"
+      epoch_length: "11"
+      allowed_future_block_time: "0"
+      proposer_policy: null
+      max_request_timeout_seconds: null
+    - block: "20"
+      request_timeout_seconds: "110"
+      block_period_seconds: "0"
+      epoch_length: "12"
+      allowed_future_block_time: "0"
+      proposer_policy: null
+      max_request_timeout_seconds: null
+    - block: "10"
+      request_timeout_seconds: "111"
+      block_period_seconds: "0"
+      epoch_length: "13"
+      allowed_future_block_time: "0"
+      proposer_policy: null
+      max_request_timeout_seconds: null
+number: "10"

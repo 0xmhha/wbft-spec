@@ -1,0 +1,16 @@
+runner: "header"
+handler: "verify_header"
+case: "accept_epoch_block_4"
+kind: "chain"
+description: "stored epoch block 4 with EpochInfo; header verification does not check the EpochInfo content"
+requirements:
+  - "WBFT-HDR-080"
+  - "WBFT-HDR-131"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

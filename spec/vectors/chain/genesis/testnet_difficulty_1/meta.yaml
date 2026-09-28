@@ -1,0 +1,22 @@
+runner: "chain"
+handler: "genesis"
+case: "testnet_difficulty_1"
+kind: "pure"
+description: "preset 8283 with difficulty 1: the hash rule is selected by Difficulty == 1 and gives the plain header hash because the genesis extra is canonical"
+requirements:
+  - "SNET-GEN-001"
+  - "SNET-GEN-002"
+  - "SNET-GEN-003"
+  - "SNET-GEN-005"
+  - "SNET-GEN-006"
+  - "SNET-GEN-007"
+  - "SNET-GEN-016"
+  - "SNET-GEN-017"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage3"
+  version: "0.3.1"

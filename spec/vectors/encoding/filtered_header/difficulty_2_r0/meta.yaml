@@ -1,0 +1,16 @@
+runner: "encoding"
+handler: "filtered_header"
+case: "difficulty_2_r0"
+kind: "pure"
+description: "filtered_header(header, round): Extra re-encoded without prepared_seal and committed_seal and with round replaced; fails when the extra does not decode: H with Difficulty = 2: Ethereum rule keccak256(rlp(header))"
+requirements:
+  - "WBFT-ENC-080"
+  - "WBFT-ENC-090"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen"
+  version: "0.1.1"

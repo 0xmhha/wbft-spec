@@ -1,0 +1,23 @@
+runner: "validators"
+handler: "next_epoch_info"
+case: "sticky_epoch_1"
+kind: "chain"
+description: "the plan of A-04 §6.8 with policy Sticky: the proposer replay uses config_at(e).proposer_policy. The chain fixture is not header-valid: this computation reads only Coinbase, the previous-seal bitmaps, ParentHash links and the MixDigest of the epoch header (keccak256 of the block number, as in A-04 §6.8); aggregate signatures are the placeholder c0 || 95 x 00"
+requirements:
+  - "WBFT-EPOCH-008"
+  - "WBFT-EPOCH-009"
+  - "WBFT-EPOCH-010"
+  - "WBFT-EPOCH-011"
+  - "WBFT-EPOCH-013"
+  - "WBFT-EPOCH-016"
+  - "WBFT-EPOCH-018"
+  - "WBFT-EPOCH-019"
+  - "WBFT-EPOCH-020"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

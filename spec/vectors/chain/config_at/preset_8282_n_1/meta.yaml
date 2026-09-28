@@ -1,0 +1,18 @@
+runner: "chain"
+handler: "config_at"
+case: "preset_8282_n_1"
+kind: "pure"
+description: "genesis section of preset 8282 (B-01 §11.1), no transitions"
+requirements:
+  - "WBFT-PARAM-050"
+  - "SNET-CFG-015"
+  - "WBFT-PARAM-030"
+  - "SNET-CFG-014"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

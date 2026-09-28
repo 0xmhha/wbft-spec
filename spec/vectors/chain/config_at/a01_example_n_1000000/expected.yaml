@@ -1,0 +1,6 @@
+request_timeout: "2000"
+block_period: "2"
+epoch: "20"
+proposer_policy: "1"
+max_request_timeout_seconds: "0"
+allowed_future_block_time: "0"

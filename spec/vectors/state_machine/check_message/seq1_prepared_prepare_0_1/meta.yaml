@@ -1,0 +1,15 @@
+runner: "state_machine"
+handler: "check_message"
+case: "seq1_prepared_prepare_0_1"
+kind: "pure"
+description: "node at view (1, 0) after the genesis head, prior round 0, state Prepared, PREPARE for view (0, 1): OLD (A-05 §5.2)"
+requirements:
+  - "WBFT-SM-019"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage3"
+  version: "0.3.1"

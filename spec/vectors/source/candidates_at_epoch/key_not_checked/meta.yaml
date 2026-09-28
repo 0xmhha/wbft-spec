@@ -1,0 +1,18 @@
+runner: "source"
+handler: "candidates_at_epoch"
+case: "key_not_checked"
+kind: "pure"
+description: "a BLS key parameter of 20 bytes for key 1: the reader returns the stored bytes unmodified (no length or point check when the epoch information is built); the reader is Engine.GetGovCandidates and systemcontracts.GetBLSPublicKey at the GovValidator address in force at block 10, and systemcontracts.GetGasTip at the genesis GovValidator address"
+requirements:
+  - "SNET-SRC-006"
+  - "SNET-SYS-040"
+  - "SNET-SYS-061"
+  - "SNET-SYS-062"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

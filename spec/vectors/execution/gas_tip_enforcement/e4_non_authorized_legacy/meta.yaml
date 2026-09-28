@@ -1,0 +1,23 @@
+runner: "execution"
+handler: "gas_tip_enforcement"
+case: "e4_non_authorized_legacy"
+kind: "pure"
+description: "B-07 E-4: non-authorized legacy transaction with gas price 1 000 000 gwei: tip cap T, fee cap 1 000 000 gwei, gas price 47 600 gwei; the balance check uses the fee cap (21 coin); transactions applied with core.ApplyTransaction in order, as StateProcessor.Process applies the transactions of a block"
+requirements:
+  - "SNET-TX-001"
+  - "SNET-TX-012"
+  - "SNET-TX-015"
+  - "SNET-TX-050"
+  - "SNET-TX-051"
+  - "SNET-TX-071"
+  - "SNET-TX-010"
+  - "SNET-TX-032"
+  - "SNET-TX-073"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

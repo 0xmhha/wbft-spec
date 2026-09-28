@@ -1,0 +1,16 @@
+runner: "chain"
+handler: "genesis"
+case: "number_not_zero"
+kind: "pure"
+description: "preset 8282 with number 1: the genesis block cannot be committed"
+requirements:
+  - "SNET-GEN-004"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage3"
+  version: "0.3.1"
+expected_error: "can't commit genesis block with number > 0"

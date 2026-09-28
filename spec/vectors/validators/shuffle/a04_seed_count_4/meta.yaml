@@ -1,0 +1,15 @@
+runner: "validators"
+handler: "shuffle"
+case: "a04_seed_count_4"
+kind: "pure"
+description: "seed keccak256(\"wbft-spec-a04\") of A-04 §6.8, every index"
+requirements:
+  - "WBFT-EPOCH-018"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

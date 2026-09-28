@@ -1,0 +1,18 @@
+runner: "source"
+handler: "candidates_at_epoch"
+case: "repeated_validator_parameter"
+kind: "pure"
+description: "B-08 V-SRC-007: the validators parameter lists key 0 twice (positions 0 and 2): the initializer keeps the first occurrence only, so the list is keys 0, 1, 2; the reader is Engine.GetGovCandidates and systemcontracts.GetBLSPublicKey at the GovValidator address in force at block 10, and systemcontracts.GetGasTip at the genesis GovValidator address"
+requirements:
+  - "SNET-SRC-006"
+  - "SNET-SYS-040"
+  - "SNET-SYS-061"
+  - "SNET-SYS-062"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

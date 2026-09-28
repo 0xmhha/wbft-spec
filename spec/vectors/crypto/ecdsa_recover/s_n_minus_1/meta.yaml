@@ -1,0 +1,16 @@
+runner: "crypto"
+handler: "ecdsa_recover"
+case: "s_n_minus_1"
+kind: "pure"
+description: "ecdsa_recover_address(data, sig) as in a cgo build: S = n - 1 (largest S in range): accepted, recovers some key"
+requirements:
+  - "WBFT-CRYPTO-013"
+  - "WBFT-TYPE-003"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen"
+  version: "0.1.1"

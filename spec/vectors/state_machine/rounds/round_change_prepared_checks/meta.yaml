@@ -1,0 +1,21 @@
+runner: "state_machine"
+handler: "rounds"
+case: "round_change_prepared_checks"
+kind: "steps"
+description: "N = 4, node v1: a ROUND-CHANGE whose prepared block is for another sequence is rejected (A-05 §16 row 23); one whose certificate is below quorum is stored but does not set the highest prepared round (WBFT-SM-055)"
+requirements:
+  - "WBFT-SM-001"
+  - "WBFT-SM-014"
+  - "WBFT-SM-019"
+  - "WBFT-SM-020"
+  - "WBFT-SM-054"
+  - "WBFT-SM-055"
+  - "WBFT-SM-056"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage3"
+  version: "0.3.1"

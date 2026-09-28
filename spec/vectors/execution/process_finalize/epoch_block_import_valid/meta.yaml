@@ -1,0 +1,23 @@
+runner: "execution"
+handler: "process_finalize"
+case: "epoch_block_import_valid"
+kind: "chain"
+description: "epoch block 8 as the import path receives it, with the EpochInfo that the proposer path wrote, sealed: the recomputed EpochInfo matches"
+requirements:
+  - "SNET-FIN-001"
+  - "SNET-FIN-002"
+  - "SNET-FIN-021"
+  - "SNET-FIN-013"
+  - "SNET-FIN-015"
+  - "SNET-FIN-017"
+  - "SNET-FIN-018"
+  - "WBFT-EPOCH-021"
+  - "SNET-SRC-001"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

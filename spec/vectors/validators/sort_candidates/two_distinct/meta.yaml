@@ -1,0 +1,15 @@
+runner: "validators"
+handler: "sort_candidates"
+case: "two_distinct"
+kind: "pure"
+description: "two candidates, the second with higher diligence; the order equals a stable sort"
+requirements:
+  - "WBFT-EPOCH-016"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

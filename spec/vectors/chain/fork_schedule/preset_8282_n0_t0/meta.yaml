@@ -1,0 +1,22 @@
+runner: "chain"
+handler: "fork_schedule"
+case: "preset_8282_n0_t0"
+kind: "pure"
+description: "preset 8282: every fork at block 0, Boho at 0, no timestamp fork; block 0, time 0"
+requirements:
+  - "SNET-CFG-002"
+  - "SNET-CFG-003"
+  - "SNET-CFG-004"
+  - "SNET-CFG-005"
+  - "SNET-CFG-006"
+  - "SNET-CFG-018"
+  - "SNET-CFG-019"
+  - "SNET-CFG-032"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage3"
+  version: "0.3.1"

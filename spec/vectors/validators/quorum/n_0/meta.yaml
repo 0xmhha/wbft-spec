@@ -1,0 +1,17 @@
+runner: "validators"
+handler: "quorum"
+case: "n_0"
+kind: "pure"
+description: "N = 0: F = -0.33333333333333331 (binary64), quorum 1, F+1 threshold 0; N = 0 is not reachable on a valid chain but is evaluated when no validator set can be loaded (A-04 §2.2)"
+requirements:
+  - "WBFT-VAL-001"
+  - "WBFT-VAL-002"
+  - "WBFT-VAL-003"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

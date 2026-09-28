@@ -1,0 +1,23 @@
+runner: "chain"
+handler: "fork_schedule"
+case: "testnet_boho_at_0_n0_t0"
+kind: "pure"
+description: "preset 8283 with bohoBlock 0: the Boho upgrade is in force from genesis; block 0, time 0"
+requirements:
+  - "SNET-CFG-002"
+  - "SNET-CFG-003"
+  - "SNET-CFG-004"
+  - "SNET-CFG-005"
+  - "SNET-CFG-006"
+  - "SNET-CFG-018"
+  - "SNET-CFG-019"
+  - "SNET-CFG-011"
+  - "SNET-CFG-021"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage3"
+  version: "0.3.1"

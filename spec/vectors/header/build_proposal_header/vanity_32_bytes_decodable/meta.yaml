@@ -1,0 +1,23 @@
+runner: "header"
+handler: "build_proposal_header"
+case: "vanity_32_bytes_decodable"
+kind: "chain"
+description: "builder vanity of exactly 32 bytes that decodes as a WBFTExtra (VanityData of 21 bytes, Round 7): the decoded fields not overwritten are kept (A-08 §3.6 edge case)"
+requirements:
+  - "WBFT-HDR-010"
+  - "WBFT-HDR-011"
+  - "WBFT-HDR-012"
+  - "WBFT-HDR-013"
+  - "WBFT-HDR-014"
+  - "WBFT-HDR-020"
+  - "WBFT-HDR-040"
+  - "WBFT-HDR-042"
+  - "WBFT-HDR-016"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

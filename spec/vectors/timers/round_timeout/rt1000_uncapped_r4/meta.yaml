@@ -1,0 +1,16 @@
+runner: "timers"
+handler: "round_timeout"
+case: "rt1000_uncapped_r4"
+kind: "pure"
+description: "request_timeout 1000 ms, no cap"
+requirements:
+  - "WBFT-TIMER-005"
+  - "WBFT-TIMER-008"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

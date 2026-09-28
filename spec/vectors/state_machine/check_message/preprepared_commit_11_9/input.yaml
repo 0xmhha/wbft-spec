@@ -1,0 +1,9 @@
+view:
+  sequence: "10"
+  round: "2"
+state: "Preprepared"
+prior_round: "1"
+code: "20"
+message_view:
+  sequence: "11"
+  round: "9"

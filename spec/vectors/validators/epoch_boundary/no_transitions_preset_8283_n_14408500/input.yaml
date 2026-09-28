@@ -1,0 +1,10 @@
+config:
+  wbft:
+    request_timeout_seconds: "2"
+    block_period_seconds: "1"
+    epoch_length: "140"
+    allowed_future_block_time: "0"
+    proposer_policy: "0"
+    max_request_timeout_seconds: null
+  transitions: []
+number: "14408500"

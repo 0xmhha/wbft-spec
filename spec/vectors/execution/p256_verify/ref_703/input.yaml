@@ -1,0 +1,7 @@
+config:
+  preset: "8282"
+  overrides:
+    applepie_block: null
+    boho_block: null
+number: "1"
+input: "0x532eaabd9574880dbf76b9b8cc00832c20a6ec113d682299550d7a6e0f345e257ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffd710f8e3edc7c2d5a3fd23de844002bb949d9f794f6d5405f6d97c1bb03dd2bd2b975183b42551cf52f291d5c1921fd5e12f50c8c85a4beb9de03efa3f0f244862243018e6866df922dc313612020311ff21e242ce3fb15bc78c406b25ab43091"

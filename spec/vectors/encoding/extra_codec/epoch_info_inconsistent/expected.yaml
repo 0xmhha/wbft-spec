@@ -1,0 +1,19 @@
+vanity_data: "0x"
+randao_reveal: "0x"
+prev_round: "0"
+prev_prepared_seal: null
+prev_committed_seal: null
+round: "0"
+prepared_seal: null
+committed_seal: null
+gas_tip: "0"
+epoch_info:
+  candidates:
+    - addr: "0x376ab524a47492d1c8222c67c0cff8d5fec34112"
+      diligence: "1"
+  validators:
+    - "0"
+    - "5"
+  bls_public_keys:
+    - "0x010203"
+encoded: "0xea808080c0c080c0c080e0d7d694376ab524a47492d1c8222c67c0cff8d5fec3411201c28005c483010203"

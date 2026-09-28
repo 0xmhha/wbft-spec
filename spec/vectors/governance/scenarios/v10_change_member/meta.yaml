@@ -1,0 +1,21 @@
+runner: "governance"
+handler: "scenarios"
+case: "v10_change_member"
+kind: "steps"
+description: "B-05 V-10: B changes its address to B2 (no proposal); the validator vB now belongs to operator B2, whose configureValidator of vB with a new key is a key change; each step runs as a transaction message of its own block (core.ApplyMessage, as core.ApplyTransaction does) on the state the previous step left"
+requirements:
+  - "SNET-GOV-001"
+  - "SNET-GOV-160"
+  - "SNET-GOV-161"
+  - "SNET-GOV-162"
+  - "SNET-GOV-012"
+  - "SNET-GOV-103"
+  - "SNET-GOV-109"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

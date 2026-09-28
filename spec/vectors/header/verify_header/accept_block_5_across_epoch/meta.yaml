@@ -1,0 +1,18 @@
+runner: "header"
+handler: "verify_header"
+case: "accept_block_5_across_epoch"
+kind: "chain"
+description: "stored block 5: V(5) comes from block 4, its previous seals (of block 4) are checked with Vp = V(4) from the genesis header, so V and Vp differ"
+requirements:
+  - "WBFT-HDR-080"
+  - "WBFT-VAL-010"
+  - "WBFT-HDR-101"
+  - "WBFT-HDR-103"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

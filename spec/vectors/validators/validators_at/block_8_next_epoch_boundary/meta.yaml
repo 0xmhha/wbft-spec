@@ -1,0 +1,16 @@
+runner: "validators"
+handler: "validators_at"
+case: "block_8_next_epoch_boundary"
+kind: "chain"
+description: "height 8 (the next epoch block) is still sealed by the set recorded at 4; header 8 is not stored, parent_hash is block 7"
+requirements:
+  - "WBFT-VAL-006"
+  - "WBFT-VAL-011"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

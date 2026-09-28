@@ -1,0 +1,16 @@
+runner: "header"
+handler: "verify_header"
+case: "reject_fork_block_canonical_epoch_header"
+kind: "chain"
+description: "the same block 6' when the canonical epoch header 4 is stored: the canonical EpochInfo (validators keys 3, 1, 4, 0) is used, so the seals made by the branch's set do not verify (A-08 WBFT-HDR-071); reference error (informative): invalid prepared seals"
+requirements:
+  - "WBFT-HDR-080"
+  - "WBFT-HDR-071"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

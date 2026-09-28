@@ -1,0 +1,22 @@
+runner: "state_machine"
+handler: "rounds"
+case: "retry_after_round_advanced"
+kind: "steps"
+description: "N = 4, node v2 in round 2 handles a retry expiry of round 1: it sends nothing but re-arms the retry timer for its current round (A-06 WBFT-TIMER-022)"
+requirements:
+  - "WBFT-SM-001"
+  - "WBFT-SM-014"
+  - "WBFT-SM-019"
+  - "WBFT-SM-020"
+  - "WBFT-TIMER-010"
+  - "WBFT-TIMER-015"
+  - "WBFT-TIMER-020"
+  - "WBFT-TIMER-022"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage3"
+  version: "0.3.1"

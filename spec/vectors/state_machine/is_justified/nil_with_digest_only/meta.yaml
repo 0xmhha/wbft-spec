@@ -1,0 +1,15 @@
+runner: "state_machine"
+handler: "is_justified"
+case: "nil_with_digest_only"
+kind: "pure"
+description: "one ROUND-CHANGE without prepared round but with a non-zero digest: not counted by step 6, two remain, fails (reference result: not justified: quorum of roundchange messages with nil prepared round not found)"
+requirements:
+  - "WBFT-SM-061"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage3"
+  version: "0.3.1"

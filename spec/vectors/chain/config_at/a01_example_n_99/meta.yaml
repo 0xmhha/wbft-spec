@@ -1,0 +1,17 @@
+runner: "chain"
+handler: "config_at"
+case: "a01_example_n_99"
+kind: "pure"
+description: "A-01 §6.6: transitions given unsorted (200, 100, 300); a 0 requestTimeoutSeconds does not override, an explicit maxRequestTimeoutSeconds 0 does"
+requirements:
+  - "WBFT-PARAM-050"
+  - "SNET-CFG-015"
+  - "WBFT-PARAM-051"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

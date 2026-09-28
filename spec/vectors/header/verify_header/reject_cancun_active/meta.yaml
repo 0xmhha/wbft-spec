@@ -1,0 +1,15 @@
+runner: "header"
+handler: "verify_header"
+case: "reject_cancun_active"
+kind: "chain"
+description: "H8: configuration with cancunTime 0 (B-03 SNET-BHDR-005); reference error (informative): wbft does not support cancun fork"
+requirements:
+  - "WBFT-HDR-080"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

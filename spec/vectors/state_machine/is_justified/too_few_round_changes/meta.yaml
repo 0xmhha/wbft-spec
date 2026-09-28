@@ -1,0 +1,15 @@
+runner: "state_machine"
+handler: "is_justified"
+case: "too_few_round_changes"
+kind: "pure"
+description: "two ROUND-CHANGEs with Q = 3: fails at step 2 (reference result: not justified: number of roundchange messages is less than required quorum of messages)"
+requirements:
+  - "WBFT-SM-061"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage3"
+  version: "0.3.1"

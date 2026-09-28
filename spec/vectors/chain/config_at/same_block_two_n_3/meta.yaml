@@ -1,0 +1,16 @@
+runner: "chain"
+handler: "config_at"
+case: "same_block_two_n_3"
+kind: "pure"
+description: "two transitions at block 4 that set requestTimeoutSeconds 3 and 5: they are applied in configuration order, so 5 wins"
+requirements:
+  - "WBFT-PARAM-050"
+  - "SNET-CFG-015"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

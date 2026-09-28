@@ -1,0 +1,16 @@
+runner: "header"
+handler: "verify_header"
+case: "reject_timestamp_equal_parent"
+kind: "chain"
+description: "H12: Time = parent.Time with block period 1; reference error (informative): invalid timestamp"
+requirements:
+  - "WBFT-HDR-080"
+  - "WBFT-HDR-085"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

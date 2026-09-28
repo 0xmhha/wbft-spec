@@ -1,0 +1,19 @@
+runner: "crypto"
+handler: "aggregate_public_keys"
+case: "decode_pk_x_zero"
+kind: "pure"
+description: "aggregate_public_keys(public_keys): sum of keys each validated by WBFT-CRYPTO-023: one key: compressed x = 0 with only the compression flag (0x80||47x00): rejected by the reference at decompression"
+requirements:
+  - "WBFT-CRYPTO-023"
+  - "WBFT-CRYPTO-028"
+  - "WBFT-CRYPTO-022"
+  - "WBFT-CRYPTO-056"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen"
+  version: "0.1.1"
+expected_error: "could not unmarshal bytes into public key"

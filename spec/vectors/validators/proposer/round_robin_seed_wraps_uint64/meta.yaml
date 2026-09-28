@@ -1,0 +1,17 @@
+runner: "validators"
+handler: "proposer"
+case: "round_robin_seed_wraps_uint64"
+kind: "pure"
+description: "3 validators, RoundRobin, last proposer at index 2, round 2^64-1: seed 2 + (2^64-1) + 1 wraps modulo 2^64 to 2, index 2 (unbounded arithmetic would give index 0)"
+requirements:
+  - "WBFT-PROP-001"
+  - "WBFT-PROP-003"
+  - "WBFT-PROP-005"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

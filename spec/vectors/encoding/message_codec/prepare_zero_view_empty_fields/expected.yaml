@@ -1,0 +1,7 @@
+type: "PREPARE"
+sequence: "0"
+round: "0"
+digest: "0x6284d1a2d0a027e77a8249b3ab24207ef68a2f5b98236cc4b044b6aaf5a10a1e"
+seal: "0x"
+signature: "0x"
+encoded: "0xe6e48080a06284d1a2d0a027e77a8249b3ab24207ef68a2f5b98236cc4b044b6aaf5a10a1e8080"

@@ -1,0 +1,20 @@
+runner: "encoding"
+handler: "message_codec"
+case: "prepare_big_view"
+kind: "pure"
+description: "decode the devp2p payload with the decoder for the code, then re-encode: PREPARE with sequence 2^64+1 and round 2^32+3 (bigint fields)"
+requirements:
+  - "WBFT-MSG-010"
+  - "WBFT-MSG-011"
+  - "WBFT-MSG-001"
+  - "WBFT-MSG-004"
+  - "WBFT-TYPE-010"
+  - "WBFT-TYPE-012"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen"
+  version: "0.1.1"

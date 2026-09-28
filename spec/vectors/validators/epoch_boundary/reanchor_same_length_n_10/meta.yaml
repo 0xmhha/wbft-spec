@@ -1,0 +1,15 @@
+runner: "validators"
+handler: "epoch_boundary"
+case: "reanchor_same_length_n_10"
+kind: "pure"
+description: "epochLength 4, {6, epochLength 4}: re-anchored at 6 with the same length"
+requirements:
+  - "WBFT-EPOCH-003"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

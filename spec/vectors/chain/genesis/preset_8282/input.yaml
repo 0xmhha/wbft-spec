@@ -1,0 +1,10 @@
+genesis:
+  preset: "8282"
+  overrides:
+    timestamp: null
+    gas_limit: null
+    difficulty: null
+    number: null
+    extra_data: null
+    boho_block: null
+    alloc_add: []

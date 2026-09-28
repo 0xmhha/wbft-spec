@@ -1,0 +1,18 @@
+runner: "execution"
+handler: "fee_delegation"
+case: "authorized_sender_delegated"
+kind: "pure"
+description: "as E-7 with an authorized sender (key 7): the tip is the sender's own max_priority_fee (1 gwei); authorization is looked up for the sender, not the fee payer; transactions applied with core.ApplyTransaction in order, as StateProcessor.Process applies the transactions of a block"
+requirements:
+  - "SNET-TX-012"
+  - "SNET-TX-011"
+  - "SNET-TX-031"
+  - "SNET-TX-034"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

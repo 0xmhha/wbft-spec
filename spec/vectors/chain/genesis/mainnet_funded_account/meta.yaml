@@ -1,0 +1,23 @@
+runner: "chain"
+handler: "genesis"
+case: "mainnet_funded_account"
+kind: "pure"
+description: "preset 8282 with one funded account (10^18 wei): the NativeCoinAdapter total supply follows the allocation"
+requirements:
+  - "SNET-GEN-001"
+  - "SNET-GEN-002"
+  - "SNET-GEN-003"
+  - "SNET-GEN-005"
+  - "SNET-GEN-006"
+  - "SNET-GEN-007"
+  - "SNET-GEN-016"
+  - "SNET-GEN-017"
+  - "SNET-GEN-011"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage3"
+  version: "0.3.1"

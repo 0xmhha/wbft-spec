@@ -1,0 +1,18 @@
+runner: "crypto"
+handler: "bls_sign"
+case: "key0_wbft_bls"
+kind: "pure"
+description: "bls_sign(sk, msg) = sk * hash_to_G2(msg, BLS_SIG_BLS12381G2_XMD:SHA-256_SSWU_RO_POP_), no pre-hash: m = keccak256(\"wbft-bls\") (A-02 §8.3)"
+requirements:
+  - "WBFT-CRYPTO-022"
+  - "WBFT-CRYPTO-025"
+  - "WBFT-CRYPTO-042"
+  - "WBFT-TYPE-004"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen"
+  version: "0.1.1"

@@ -1,0 +1,17 @@
+runner: "network"
+handler: "receive_outcome"
+case: "size_limit_and_legacy_trailing_bytes"
+kind: "steps"
+description: "N = 4, node v1: an istanbul message longer than 10 MiB closes the connection; the rule of eth/handler_istanbul.go:138-140 is composed by the generator (A-11 shape 11). A 0x11 payload is read as its first RLP item (A-07 WBFT-NET-012, WBFT-NET-013)"
+requirements:
+  - "WBFT-NET-012"
+  - "WBFT-NET-013"
+  - "WBFT-NET-043"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage3"
+  version: "0.3.1"

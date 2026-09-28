@@ -1,0 +1,17 @@
+runner: "crypto"
+handler: "ecdsa_sign"
+case: "key0_randao_8282_1"
+kind: "pure"
+description: "ecdsa_sign(key, data) = sign(keccak256(data)) with RFC 6979 nonce and low S; R||S||V with V in {0,1}; address = keccak256(X||Y)[12:]. Data: randao_data(8282, 1): the randao reveal of A-02 §8.5"
+requirements:
+  - "WBFT-CRYPTO-010"
+  - "WBFT-CRYPTO-011"
+  - "WBFT-CRYPTO-017"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen"
+  version: "0.1.1"

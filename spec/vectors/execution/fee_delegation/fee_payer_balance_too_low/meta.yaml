@@ -1,0 +1,18 @@
+runner: "execution"
+handler: "fee_delegation"
+case: "fee_payer_balance_too_low"
+kind: "pure"
+description: "as E-7 with P holding 2 coin, below 2.38 coin: invalid (ErrInsufficientFunds of the fee payer); transactions applied with core.ApplyTransaction in order, as StateProcessor.Process applies the transactions of a block"
+requirements:
+  - "SNET-TX-012"
+  - "SNET-TX-031"
+  - "SNET-TX-060"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"
+expected_error: "transaction 0: insufficient funds for gas * price + value: feePayer 0x9d0FCF18da190885d809975BA8FAA38d495A65D1 have 2000000000000000000 want 2380000000000000000"

@@ -1,0 +1,17 @@
+runner: "crypto"
+handler: "aggregate_public_keys"
+case: "cancel_triple"
+kind: "pure"
+description: "aggregate_public_keys(public_keys): sum of keys each validated by WBFT-CRYPTO-023: keys of a, b, (-a-b) mod r: the sum is the point at infinity and no error is returned"
+requirements:
+  - "WBFT-CRYPTO-023"
+  - "WBFT-CRYPTO-028"
+  - "WBFT-CRYPTO-055"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen"
+  version: "0.1.1"

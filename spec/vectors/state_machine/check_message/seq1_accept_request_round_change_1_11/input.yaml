@@ -1,0 +1,9 @@
+view:
+  sequence: "1"
+  round: "0"
+state: "AcceptRequest"
+prior_round: "0"
+code: "21"
+message_view:
+  sequence: "1"
+  round: "11"

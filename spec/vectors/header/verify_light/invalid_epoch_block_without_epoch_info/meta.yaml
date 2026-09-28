@@ -1,0 +1,17 @@
+runner: "header"
+handler: "verify_light"
+case: "invalid_epoch_block_without_epoch_info"
+kind: "chain"
+description: "WBFT-HDR-130: epoch block 8 without EpochInfo. verify_light is not a reference function; the result is composed from reference calls (A-11 WBFT-VEC-020 exception, see the generator README); reason (informative): WBFT-HDR-130: EpochInfo presence does not match is_epoch_block"
+requirements:
+  - "WBFT-HDR-140"
+  - "WBFT-HDR-141"
+  - "WBFT-HDR-130"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

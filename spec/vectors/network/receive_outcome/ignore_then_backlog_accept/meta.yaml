@@ -1,0 +1,20 @@
+runner: "network"
+handler: "receive_outcome"
+case: "ignore_then_backlog_accept"
+kind: "steps"
+description: "N = 4, node v1: FUTURE, non-validator signature, OLD and undecodable messages are IGNORE (not relayed, no disconnect); the FUTURE message is relayed when its replay succeeds (A-07 §7, §8)"
+requirements:
+  - "WBFT-NET-041"
+  - "WBFT-NET-042"
+  - "WBFT-NET-043"
+  - "WBFT-NET-044"
+  - "WBFT-SM-012"
+  - "WBFT-SM-013"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage3"
+  version: "0.3.1"

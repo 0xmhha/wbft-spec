@@ -1,0 +1,17 @@
+runner: "timers"
+handler: "round_timeout"
+case: "cap_wraps_to_small_positive"
+kind: "pure"
+description: "maxRequestTimeoutSeconds 18446744074 wraps to a cap of 290448384 ns"
+requirements:
+  - "WBFT-TIMER-005"
+  - "WBFT-TIMER-006"
+  - "WBFT-TIMER-007"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

@@ -1,0 +1,16 @@
+runner: "timers"
+handler: "round_timeout"
+case: "a06_example_5_cap_wraps_negative"
+kind: "pure"
+description: "A-06 §4.2 example 5: maxRequestTimeoutSeconds 10000000000 wraps to a negative cap, so the uncapped branch applies"
+requirements:
+  - "WBFT-TIMER-005"
+  - "WBFT-TIMER-008"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

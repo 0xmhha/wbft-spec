@@ -1,0 +1,17 @@
+runner: "crypto"
+handler: "ecdsa_recover"
+case: "v4"
+kind: "pure"
+description: "ecdsa_recover_address(data, sig) as in a cgo build: V = 4: invalid recovery id in a cgo build (a no-cgo build maps V-4 and accepts; the cgo behaviour is normative, A-02 §3.3 note)"
+requirements:
+  - "WBFT-CRYPTO-013"
+  - "WBFT-TYPE-003"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen"
+  version: "0.1.1"
+expected_error: "invalid signature recovery id"

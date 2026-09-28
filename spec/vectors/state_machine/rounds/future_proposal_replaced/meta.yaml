@@ -1,0 +1,23 @@
+runner: "state_machine"
+handler: "rounds"
+case: "future_proposal_replaced"
+kind: "steps"
+description: "N = 4, node v1 at (10, 0): a PRE-PREPARE whose proposal fails validation causes no action; of two PRE-PREPAREs deferred as FUTURE in the same view only the later one waits, the timer of the first is cancelled and never re-processes it (A-06 WBFT-TIMER-032, A-09 WBFT-APP-051)"
+requirements:
+  - "WBFT-SM-001"
+  - "WBFT-SM-014"
+  - "WBFT-SM-019"
+  - "WBFT-SM-020"
+  - "WBFT-SM-038"
+  - "WBFT-SM-039"
+  - "WBFT-APP-051"
+  - "WBFT-TIMER-031"
+  - "WBFT-TIMER-032"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage3"
+  version: "0.3.1"

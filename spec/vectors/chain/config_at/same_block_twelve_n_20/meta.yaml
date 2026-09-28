@@ -1,0 +1,16 @@
+runner: "chain"
+handler: "config_at"
+case: "same_block_twelve_n_20"
+kind: "pure"
+description: "12 transitions (blocks alternate 20 and 10, each sets a distinct requestTimeoutSeconds): ties keep configuration order"
+requirements:
+  - "WBFT-PARAM-050"
+  - "SNET-CFG-015"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"

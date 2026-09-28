@@ -1,0 +1,18 @@
+runner: "execution"
+handler: "process_finalize"
+case: "epoch_info_on_non_epoch_block"
+kind: "chain"
+description: "block 6 (not an epoch block) whose extra carries an EpochInfo: the block is invalid"
+requirements:
+  - "SNET-FIN-002"
+  - "SNET-FIN-016"
+  - "WBFT-HDR-131"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage2"
+  version: "0.3.0"
+expected_error: "epoch info should be nil for non-epoch block"

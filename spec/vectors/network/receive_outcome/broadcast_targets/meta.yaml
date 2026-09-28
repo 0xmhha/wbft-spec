@@ -1,0 +1,18 @@
+runner: "network"
+handler: "receive_outcome"
+case: "broadcast_targets"
+kind: "steps"
+description: "N = 4, node v2 connected to v0 and v1 only: its own ROUND-CHANGE goes to the connected validators; a ROUND-CHANGE of v0 received from v1 is relayed to v0 only"
+requirements:
+  - "WBFT-NET-030"
+  - "WBFT-NET-031"
+  - "WBFT-NET-032"
+  - "WBFT-NET-040"
+reference:
+  implementation: "go-stablenet"
+  commit: "740526d0375a8aca817b580e7a4bfc4c1028ae29"
+  toolchain: "go1.23.12"
+  build: "cgo"
+generator:
+  name: "vectorgen-stage3"
+  version: "0.3.1"
